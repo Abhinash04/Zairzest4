@@ -1,0 +1,201 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); /* Inter font */
+
+/* Font Faces */
+@font-face {
+  font-family: Moon-walk;
+  src: url(./assets/fonts/Moon\ Walk.ttf);
+}
+
+/* Global Styles */
+body {
+  background-color: #000720;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #762626;
+  --secondary: #D88080;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+/* Header Styles */
+#heading {
+  color: #ffffff;
+  font-family: Moon-walk;
+  font-size: 65px;
+  display: block;
+  line-height: 65px;
+}
+
+#sub-heading {
+  color: #9a8dec;
+  font-size: 35px;
+  font-weight: 500;
+  display: block;
+  line-height: 50px;
+}
+
+/* Navbar Styles */
+#navbar {
+  font-family: "Inter", sans-serif;
+}
+
+#navbar-cta {
+  position: relative;
+  top: 5px;
+}
+
+.nav-links {
+  color: #e8dcdc;
+  text-decoration: none;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #762626;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+/* Button styling */
+.btn-groups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn {
+  padding: .85rem 1.5rem;
+  border: none;
+  border-radius: .25rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+}
+
+.btn-primary {
+  background-color: #762626;
+  color: #fff
+}
+
+.btn-primary:hover {
+  background-color: #D88080;
+}
+
+/* Section Styles */
+#section1, #section2, #section3, #section4, #section5, #section6 {
+  margin: 0 7vw 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Footer Styles */
+#footer {
+  min-height: 108px;
+  background: #9a8dec;
+  padding: 2vw 10vw;
+}
+
+#footer-left {
+  max-width: 587px;
+}
+
+#footer-text {
+  max-width: 527px;
+  color: #c8cddc;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+
+#footer-right {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+
+/* Responsive Styles */
+@media (max-width: 769px) {
+  .nav-links {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  #heading {
+    font-size: 50px;
+    line-height: 45px;
+  }
+
+  #sub-heading {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 480px){
+  #footer {
+    padding: 6vw 5vw 12vw;
+  }
+
+  .sub-heading {
+    font-size: 18px;
+  }
+
+  .heading {
+    font-size: 42px;
+  }
+
+  #dropdown-menu {
+    padding: 5px 4px;
+  }
+
+  #footer {
+    padding: 6vw 5vw 12vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .custom-mx {
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+
+  .nav-reg {
+    margin-right: -40px;
+  }
+}
