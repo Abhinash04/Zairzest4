@@ -1,0 +1,84 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.login-left-container{
+    background-image: url(../../assets/images/bg-register.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    padding:0rem 5rem;
+}
+.loginleft-text{
+    width:400px;
+    font-size:25px;
+}
+
+.loginleft-para{
+    width:370px;
+}
+
+.login-left-colors{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.login-left-color-1{
+    background-color:#FFFFFF;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+}
+.login-left-color-2{
+    background-color:#E82E8A;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+}
+.login-left-color-3{
+    background-color:#6517BB;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+}
+
+@media(max-width: 1096px){
+    .login-left-container{
+        height: 115vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media(max-width:1020px){
+    .login-left-container{
+        width: 275px;
+    }
+}
+
+@media(max-width:871px){
+    .login-left-container{
+        width: 200px;
+    }
+    .loginleft-text{
+        width:300px;
+        font-size:25px;
+    }
+    
+    .loginleft-para{
+        width:300px;
+    }
+    
+}
+@media(max-width: 799px){
+    .login-left-container{
+        height: 136vh;
+    }
+}
