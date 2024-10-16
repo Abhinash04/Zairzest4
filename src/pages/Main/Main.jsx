@@ -25,7 +25,7 @@ const Main = () => {
   };
 
   return (
-    <>
+    <div className="home">
       <Navbar />
       <div className="main-page">
         <div className="top-part">
@@ -133,7 +133,7 @@ const Main = () => {
       <div className="foot">
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

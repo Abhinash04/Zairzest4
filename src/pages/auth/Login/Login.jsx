@@ -5,40 +5,35 @@ import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "../authCSS/auth.scss";
 import Loginleft from "../../../component/loginLeft/Loginleft";
-import { AiOutlineEye } from 'react-icons/ai';
-import {AiOutlineEyeInvisible} from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import g_logo from "../../../assets/images/g_logo.png";
+// import { Player } from "../../../component/MusicPlayer/Player";
 
 const Login = () => {
   const [loading, setLoading] = useState(0);
-  const [eye,setEye]=useState(true);
-  const [type,setType]=useState("password");
-  const handleEyeClick=()=>{
-    if(eye===false){
-      setType("text");
-      setEye(!eye);
-    }
-    else{
-      setType("Password");
-      setEye(!eye);
-    }
-  }
+  const [eye, setEye] = useState(true);
+  const [type, setType] = useState("password"); // Correct "password" type here
+  
+  const handleEyeClick = () => {
+    setType(eye ? "text" : "password"); // Toggle between 'text' and 'password'
+    setEye(!eye); // Toggle the eye state
+  };
+
   const nav = useNavigate();
   const [loginData, setloginData] = useState({
     email: "",
     password: "",
   });
+
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     setLoading(1);
     try {
-      console.log("login");
       const luser = "https://web-backend-3bsv.onrender.com/login/user";
       const res = await axios.post(luser, loginData);
-      console.log("login out");
       const token = res.data?.token;
       sessionStorage.setItem("Auth Token", token);
       toast.success("Login Successful");
-
       setTimeout(() => {
         nav("/");
       }, 3000);
@@ -58,54 +53,66 @@ const Login = () => {
   const handleLoginChange = (e) => {
     setloginData({ ...loginData, [e.target.name]: e.target.value });
   };
+
   return (
-  
-     <div className="auth-container">
-      <Loginleft className="left-container"/>
+    <div className="auth-container">
+      <Loginleft className="left-container" />
       <div className="auth-box-container">
-      <div className="auth-box">
-        <h1 className="auth-heading">Enter details to get your code</h1>
-        <p className="auth-head-bottom">This code is unique for every use</p>
-        <form className="auth-box-form" onSubmit={handleLoginSubmit}>
-          <div>
-            <input
-              className="auth-input"
-              type="email"
-              required
-              name="email"
-              value={loginData.email}
-              onChange={handleLoginChange}
-              placeholder="Email here"
-            />
+        <div className="auth-box">
+          <h1 className="auth-heading">Become the Beast of the Cyber Forest</h1>
+          <p className="auth-head-bottom">Sign In to get into Zairzest</p>
+          <form className="auth-box-form" onSubmit={handleLoginSubmit}>
+            <div>
+              <input
+                className="auth-input"
+                type="email"
+                required
+                name="email"
+                value={loginData.email}
+                onChange={handleLoginChange}
+                placeholder="Email here"
+              />
+            </div>
+            <div className="input-div">
+              <input
+                className="auth-input"
+                type={type} // Using the dynamic type here
+                required
+                name="password"
+                value={loginData.password}
+                onChange={handleLoginChange}
+                placeholder="Password"
+              />
+              <span className="eye-icon">
+                {eye ? (
+                  <AiOutlineEyeInvisible onClick={handleEyeClick} />
+                ) : (
+                  <AiOutlineEye onClick={handleEyeClick} />
+                )}
+              </span>
+            </div>
+          </form>
+          <div className="auth-bottom-text">
+            Don't remember Password ? <Link to="/register">Reset Password</Link>
           </div>
-          <div className="input-div">
-            <input
-              className="auth-input"
-              type="password"
-              required
-              name="password"
-              value={loginData.password}
-              onChange={handleLoginChange}
-              placeholder="Password"
-            />
-            <span  className="eye-icon">{
-              eye==true ? 
-              <AiOutlineEyeInvisible onClick={()=>{handleEyeClick()}}/>
-               
-              :
-              <AiOutlineEye onClick={()=>{handleEyeClick()}}/>
-            }
-            </span>
+          <div className="auth-bottom-text-2">
+            Not a Member yet ? <Link to="/register">Sign Up</Link>
           </div>
-          <button type="submit" className="auth-sbutton">{loading===0?"Login":"Please Wait"}</button>
-        </form>
-        <div className="auth-bottom-text">
-          Not registered ? <Link to="/register">Register</Link>
+          <div className="auth-buttons">
+            <button type="submit" className="auth-sbutton">
+              {" "}
+              {loading===0?"Sign Up":"Please Wait"}
+            </button>
+            <p className="or">Or</p>
+            <button type="submit" className="auth-gbutton">
+              <p>Sign up with</p>
+              <img src={g_logo} alt="" />
+            </button>
+            </div>
         </div>
       </div>
+      <ToastContainer theme="colored" />
     </div>
-    <ToastContainer theme="colored" />
-   </div>
   );
 };
 

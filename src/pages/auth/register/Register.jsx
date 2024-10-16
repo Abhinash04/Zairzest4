@@ -8,6 +8,7 @@ import Loginleft from "../../../component/loginLeft/Loginleft";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import scan from "../../../assets/images/scan.webp";
+import g_logo from "../../../assets/images/g_logo.png";
 
 const Register = () => {
   const [loading, setLoading] = useState(0);
@@ -22,13 +23,8 @@ const Register = () => {
   });
 
   const handleEyeClick = () => {
-    if (eye === false) {
-      setType("text");
-      setEye(!eye);
-    } else {
-      setType("Password");
-      setEye(!eye);
-    }
+    setType(eye ? "text" : "password"); // Toggle between text and password
+    setEye(!eye); // Toggle the eye state
   };
 
   const handleRegisterChange = (e) => {
@@ -67,9 +63,8 @@ const Register = () => {
       <Loginleft className="left-container" />
       <div className="auth-box-container">
         <div className="auth-box">
-          <h1 className="auth-heading">Experience the Future Tech</h1>
-          <p className="auth-head-bottom">Register for Zairzest 3.0</p>
-          <p className="auth-head-bottom"><strong style={{color : "black"}}>Remember your Password while registering to login further.</strong></p>
+          <h1 className="auth-heading">Become the Beast of the Cyber Forest</h1>
+          <p className="auth-head-bottom">Sign up to get into Zairzest</p>
           <form className="auth-box-form" onSubmit={handleRegisterSubmit}>
             <div>
               <input
@@ -115,35 +110,46 @@ const Register = () => {
                 placeholder="Create Your Own Password"
               />
               <span className="eye-icon">
-                {eye === true ? (
-                  <AiOutlineEyeInvisible
-                    onClick={() => {
-                      handleEyeClick();
-                    }}
-                  />
+                {eye ? (
+                  <AiOutlineEyeInvisible onClick={handleEyeClick} />
                 ) : (
-                  <AiOutlineEye
-                    onClick={() => {
-                      handleEyeClick();
-                    }}
-                  />
+                  <AiOutlineEye onClick={handleEyeClick} />
                 )}
               </span>
             </div>
             <div className="payment-part">
               <img className="payment-image" src={scan} alt="" />
-              <div className="payment-upload">
+              <div class="info-container">
+                <input type="checkbox" id="info-toggle" class="info-toggle" />
+                <label for="info-toggle" class="info-button">i</label>
+  
+                <div class="info-content">
+                  <ul>
+                    <li>Scan the QR to register</li>
+                    <li>Take the screenshot and show it in Zairza inorder to get the Zen card</li>
+                    <li>For offline payment, come to Zairza, complete the payment and get the Zen card</li>
+                  </ul>
+                </div>
+              </div>
+              {/* <div className="payment-upload">
                 <ul>
                   <li>Scan the QR to register</li>
                   <li>Take the screenshot and show it in Zairza inorder to get the Zen card</li>
                   <li>For offline payment, come to Zairza, complete the payment and get the Zen card</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
+            <div className="auth-buttons">
             <button type="submit" className="auth-sbutton">
               {" "}
-              {loading===0?"Register":"Please Wait"}
+              {loading===0?"Sign Up":"Please Wait"}
             </button>
+            <p className="or">Or</p>
+            <button type="submit" className="auth-gbutton">
+              <p>Sign up with</p>
+              <img src={g_logo} alt="" />
+            </button>
+            </div>
           </form>
           <div className="auth-bottom-text">
             Already registered ? <Link to="/login">Login</Link>

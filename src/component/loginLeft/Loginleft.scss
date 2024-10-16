@@ -5,7 +5,7 @@
 }
 
 .login-left-container{
-    background-image: url(../../assets/images/bg-register.webp);
+    background-image: url(../../assets/images/auth_bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     color:white;
@@ -16,8 +16,10 @@
     padding:0rem 5rem;
 }
 .loginleft-text{
-    width:400px;
-    font-size:25px;
+    
+    font-weight: bold;
+    font-size:30px;
+    
 }
 
 .loginleft-para{
@@ -29,26 +31,6 @@
     align-items: center;
     gap:1rem;
 }
-
-.login-left-color-1{
-    background-color:#FFFFFF;
-    width:15px;
-    height:15px;
-    border-radius: 50%;
-}
-.login-left-color-2{
-    background-color:#E82E8A;
-    width:15px;
-    height:15px;
-    border-radius: 50%;
-}
-.login-left-color-3{
-    background-color:#6517BB;
-    width:15px;
-    height:15px;
-    border-radius: 50%;
-}
-
 @media(max-width: 1096px){
     .login-left-container{
         height: 115vh;

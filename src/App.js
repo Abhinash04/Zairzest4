@@ -7,6 +7,7 @@ import Event from './pages/event/Event';
 import StaticEvents from './pages/static_events/StaticEvents'
 import "react-toastify/dist/ReactToastify.css";
 import Main from './pages/Main/Main';
+import About_us from './pages/About_Us/About_us';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/tech-events' element={<Event type="Tech Events"/>} />
         <Route path='/fun-events' element={<Event type="Fun Events"/>} />
         <Route path='/workshops' element={<Event type="Workshops"/>} />
+        <Route path='/about-us' element={<About_us/>} />
       </Routes>
     
     </div>
