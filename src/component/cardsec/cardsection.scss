@@ -25,6 +25,7 @@
 @media (max-width: 1350px) {
     .card-contain{
         justify-content : flex-start !important ;
+        margin-left: 0;
     }
 }
 
@@ -34,5 +35,6 @@
     }
     .mname{
         text-align: center;
+        margin-left: 0;
     }
 }

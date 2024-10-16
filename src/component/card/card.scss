@@ -1,20 +1,18 @@
 .card-container {
     border: 1px solid #4c4c4c;
     border-radius: 10px;
-    width: 360px;
+    width: 100%;
     min-height:400px;
     background-color: #1a1a1a;
     margin-left: 37px;
 
     .imgsec {
         width: 100%;
-        height: fit-content;
+        // height: fit-content;
         // overflow: hidden;
 
         img {
             margin: 8px;
-            width: 344px;
-            height:386px;
             // object-fit: cover;
         }
     }
@@ -23,7 +21,7 @@
         padding: 12px;
         display: flex;
         justify-content: space-between;
-        margin: 0 8px 8px 8px;
+        margin: 20px 8px 8px 8px;
         align-items: center;
 
         .ename {

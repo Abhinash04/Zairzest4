@@ -9,7 +9,7 @@
         font-weight: 700;
         font-size: 60px;
         line-height: 72px;
-        margin-left: 37px;
+        // margin-left: 37px;
         color: #fff;
     }
 
@@ -30,8 +30,12 @@
 }
 
 @media (max-width: 1350px) {
+    .mname {
+        margin-left: 0;
+        text-align: center;
+    }
     .card-contain {
-        justify-content: flex-start !important;
+        justify-content: center !important;
     }
 }
 
@@ -43,6 +47,14 @@
     .mname {
         margin-left: 0;
         text-align: center;
+    }
+
+}
+
+@media (min-width: 860px) {
+
+    .mname {
+        margin-left: 37px;
     }
 
 }

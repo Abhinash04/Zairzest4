@@ -115,7 +115,7 @@ const Main = () => {
                 }}
                 src={techEvents}
                 alt=""
-                height={200}
+                height={300}
               />
               <img
                 className="bottom-img bottom-img-fix2"
@@ -124,7 +124,7 @@ const Main = () => {
                 }}
                 src={funEvents}
                 alt=""
-                height={200}
+                height={300}
               />
             </div>
           </div>
