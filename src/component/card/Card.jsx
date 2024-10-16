@@ -1,6 +1,7 @@
 import './card.scss';
 import axios from 'axios';
 import {toast} from 'react-toastify'
+import 'boxicons/css/boxicons.min.css';
 
 const Card = ({d}) => {
   const handleClick = async () => {

@@ -1,6 +1,6 @@
-@font-face {
-  font-family: Gilroy-regular;
-  src: url(../../assets/font/Gilroy-Thin.ttf);
+@font-face{
+  font-family: Outfit-regular;
+    src: url(../../assets/font/Outfit-Thin.ttf);
 }
 .sub_nav {
   display: flex;
@@ -10,7 +10,7 @@
     padding: 1em 5%;
     padding-top: 0;
     padding-bottom: 0;
-    font-family: Gilroy-regular;
+    font-family: Outfit-regular;
     display: flex;
     justify-content: space-between;
     height: 5rem;

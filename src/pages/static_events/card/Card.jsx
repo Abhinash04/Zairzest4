@@ -1,5 +1,6 @@
 import './card.scss';
 import { Link } from 'react-router-dom';
+import 'boxicons/css/boxicons.min.css';
 
 const Card = ({d}) => {
   return (
@@ -10,17 +11,14 @@ const Card = ({d}) => {
         </div>
         <div className="nameenroll">
             <div className="ename">{d.event_name}</div>
-            <Link to="/register"><button className="enroll">Register Now</button></Link>
+            <i className='bx bx-info-circle' style={{color: "#38ccff", fontSize: "23px", cursor: 'pointer'}}  ></i>
         </div>
         <div className="dtp">
             <div className="edate">
                 <div className="etitle">Date & Time</div>
-                <div className="dtime">{d.event_date}</div>
+                <div className="dtime">Coming Soon</div>
             </div>
-            <div className="even">
-                <div className="eventi">Venue</div>
-                <div className="ven">{d.event_venue}</div>
-            </div>
+            
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
-@font-face {
-  font-family: Gilroy-bold;
-  src: url(../../assets/font/Gilroy-Bold.ttf);
+@font-face{
+  font-family: Outfit-Bold;
+    src: url(../../assets/font/Outfit-Bold.ttf);
 }
 * {
   margin: 0;
@@ -37,8 +37,7 @@
       background: transparent;
       .left-head {
         font-size: 50px;
-        font-family: Gilroy-bold;
-        background: transparent;
+        font-family: Outfit-Bold;
       }
       .zairza-head {
         font-size: 50px;
@@ -136,13 +135,19 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 150px;
+  background-color: #10151B;
   cursor: pointer;
+  padding-top: 20px;
   .event-head {
+    color: #38CCFF;
     font-size: 40px;
-    font-family: Gilroy-bold;
+    font-family: Outfit-Bold;
   }
-  .para-bottom2 {
+  .para-bottom2,
+  .para-bottom{
     margin-top: -2px;
+    color: #fff;
+    font-style: italic;
   }
   .bottom-img {
     margin: 2rem;
@@ -257,9 +262,6 @@
   .mid-part {
     flex-direction: column;
     text-align: center;
-    .left-mid-part {
-      // margin-top: 100px;
-    }
     .right-mid-part {
       width: 550px;
     }
