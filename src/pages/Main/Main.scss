@@ -1,6 +1,6 @@
-@font-face{
+@font-face {
   font-family: Outfit-Bold;
-    src: url(../../assets/font/Outfit-Bold.ttf);
+  src: url(../../assets/font/Outfit-Bold.ttf);
 }
 * {
   margin: 0;
@@ -9,7 +9,7 @@
   // background: #111111;
 }
 
-.home{
+.home {
   background-color: #111111;
   overflow: hidden;
 }
@@ -134,17 +134,17 @@
   color: white;
   align-items: center;
   justify-content: center;
-  margin-bottom: 150px;
-  background-color: #10151B;
+  margin-bottom: 90px;
+
   cursor: pointer;
   padding-top: 20px;
   .event-head {
-    color: #38CCFF;
+    color: #38ccff;
     font-size: 40px;
     font-family: Outfit-Bold;
   }
   .para-bottom2,
-  .para-bottom{
+  .para-bottom {
     margin-top: -2px;
     color: #fff;
     font-style: italic;
@@ -161,7 +161,28 @@
     transition: all 0.5s;
   }
 }
+@media (min-width: 768px) {
+  .bottom-img {
+    width: 31.5rem;
+    height: 18.25rem;
+  }
+}
 
+@media (max-width: 760px) {
+  .bottom-img {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+@media (max-width: 328px) {
+  .bottom-img {
+    width: 14rem;
+    height: 9rem;
+  }
+  .zen-image {
+    height: 300px;
+  }
+}
 //footer
 .foot {
   background-color: #1a1a1a;
@@ -212,6 +233,12 @@
     }
     .right-part {
       margin-right: 80px;
+      display: flex;
+      align-items: end;
+      flex-direction: row;
+      width: 100%;
+
+      justify-content: flex-end;
     }
     .right-img {
       height: 500px;
@@ -221,7 +248,7 @@
   .mid-part {
     .left-mid-part {
       .zen-image {
-        height: 400px;
+        height: 500px;
       }
     }
     .right-mid-part {
@@ -253,6 +280,11 @@
     }
     .right-part {
       margin-right: 0px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: end;
     }
     .right-img {
       height: 400px;
@@ -282,7 +314,7 @@
 @media (max-width: 748px) {
   .bottom-part {
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
   }
 }
 
@@ -320,7 +352,7 @@
     height: 800px;
     .left-mid-part {
       .zen-image {
-        height: 300px;
+        height: 400px;
       }
     }
     .right-mid-part {

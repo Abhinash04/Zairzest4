@@ -43,7 +43,7 @@ const Navbar = ({ userDetails }) => {
                 </Link>
               </div>
               <div className="navbar__right">
-                <Link to="/aboutus">
+                <Link to="/about-us">
                   <h4 className="navbar__text">About US</h4>
                 </Link>
                 {authToken ? (
@@ -91,7 +91,7 @@ const Navbar = ({ userDetails }) => {
                 <RxCross1 className="navbar__menu" onClick={close} />
               </div>
               <div className="nav-content-container">
-                <Link to="/aboutus" className="aboutUs-link">
+                <Link to="/about-us" className="aboutUs-link">
                   <div className="nav-button-content">About US</div>
                 </Link>
                 {authToken ? (

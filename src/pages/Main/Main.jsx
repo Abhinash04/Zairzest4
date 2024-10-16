@@ -68,7 +68,7 @@ const Main = () => {
 
         <div className="mid-part">
           <div className="left-mid-part">
-            <img className="zen-image" src={zen} alt="" height={450} />
+            <img className="zen-image" src={zen} alt="" height={550} />
           </div>
           <div className="right-mid-part">
             <h1
