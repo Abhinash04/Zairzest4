@@ -2,7 +2,7 @@ import './cardsection.scss';
 import Card from '../card/Card'
 import React from 'react';
 import {edata} from '../dataset.js';
-import {Player} from '../../../component/MusicPlayer/Player'
+import Player from '../../../component/MusicPlayer/Player.jsx';
 
 const CardSection = ({type}) => {
   const filteredData = edata?.filter((event) => {
@@ -10,9 +10,6 @@ const CardSection = ({type}) => {
   })
   return (
     <>
-      <div className="music">
-              <Player />
-        </div>
       <div className="event-container">
         <div className="mname">{type}</div>
         <br /><br />
@@ -21,6 +18,9 @@ const CardSection = ({type}) => {
             <Card d={d} key={index} />
           ))}
           {filteredData?.length === 0 && <p>No events to display</p>}
+        </div>
+        <div className="music">
+            <Player />
         </div>
       </div>
     </>
