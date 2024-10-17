@@ -92,7 +92,7 @@ const Footer = () => {
             <img
               src={zairzaLogo}
               alt=""
-              style={{ background: "transparent" }}
+              style={{ background: "transparent", height: "50px" }}
             />
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import "./Navbar.scss";
-import Logo from "../../assets/images/zairzest_logo.webp";
+import Logo from "../../assets/images/zairza.webp";
 
 const Navbar = ({ userDetails }) => {
   const [showNav, setShowNav] = useState(true);
@@ -84,7 +84,7 @@ const Navbar = ({ userDetails }) => {
               </div>
               <div className="nav-content-container">
                 <Link to="/about-us" className="aboutUs-link">
-                  <div className="nav-button-content">About US</div>
+                  <div className="nav-button-content">About Us</div>
                 </Link>
                 {authToken ? (
                   ""
@@ -111,6 +111,7 @@ const Navbar = ({ userDetails }) => {
                     Logout
                   </div>
                 )}
+                <img src={Logo} alt="" className="zairza" />
               </div>
             </div>
           </div>

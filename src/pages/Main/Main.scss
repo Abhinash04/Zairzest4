@@ -12,6 +12,25 @@
 .home {
   background-color: #111111;
   overflow: hidden;
+  ::selection {
+    background: #38ccff;
+  }
+}
+
+@media (max-width: 1016px) {
+  .btn-cntr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+}
+.home {
+  background-color: #111111;
+  overflow: hidden;
+  ::selection {
+    background: #38ccff;
+  }
 }
 
 //top portion
