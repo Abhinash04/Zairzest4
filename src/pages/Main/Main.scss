@@ -39,14 +39,6 @@
         font-size: 50px;
         font-family: Outfit-Bold;
       }
-      .zairza-head {
-        font-size: 50px;
-        margin-top: 10px;
-        padding-left: 8px;
-        width: 150px;
-
-        border-radius: 5px;
-      }
       .para-left {
         margin-top: 25px;
         color: aliceblue;
@@ -203,10 +195,6 @@
         .left-head {
           font-size: 40px;
         }
-        .zairza-head {
-          font-size: 40px;
-          width: 122px;
-        }
       }
     }
     .right-part {
@@ -257,57 +245,65 @@
   }
 }
 
-@media (max-width: 938px) {
+@media (max-width: 938px) { 
   .top-part {
     height: 100vh;
-    padding-top: 100px;
+    padding-top: 100px; /* Optional: Adjust this if you need space below the navbar */
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center vertically */
     text-align: center;
+
     .left-part {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center; /* Center vertically */
       text-align: center;
-      justify-content: center;
-      margin-left: 0px;
+      margin-left: 0;
+
       .content-left {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center; /* Center vertically */
         text-align: center;
-        justify-content: center;
+
         .left-head {
           font-size: 40px;
         }
+
         .left-head2 {
           margin-bottom: 10px;
         }
-        .zairza-head {
-          margin: auto;
-        }
       }
     }
+
     .right-part {
-      margin-right: 0px;
       display: flex;
       flex-direction: row;
       width: 100%;
-      justify-content: flex-end;
-      align-items: end;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      margin-right: 0;
     }
+
     .right-img {
       height: 400px;
     }
   }
 
   .mid-part {
+    display: flex;
     flex-direction: column;
     text-align: center;
+
     .right-mid-part {
       width: 550px;
     }
   }
+
   .bottom-part {
     margin-top: 130px;
     margin-bottom: 60px;
@@ -338,11 +334,6 @@
       .content-left {
         .left-head {
           font-size: 35px;
-        }
-        .zairza-head {
-          font-size: 35px;
-          padding-left: 2px;
-          width: 110px;
         }
         .para-left {
           font-size: 14px;
