@@ -144,11 +144,6 @@ const Register = () => {
               {" "}
               {loading===0?"Sign Up":"Please Wait"}
             </button>
-            <p className="or">Or</p>
-            <button type="submit" className="auth-gbutton">
-              <p>Sign up with</p>
-              <img src={g_logo} alt="" />
-            </button>
             </div>
           </form>
           <div className="auth-bottom-text">
