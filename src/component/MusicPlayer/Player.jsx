@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaPlay } from "react-icons/fa";
-import { FaPause } from "react-icons/fa";
+import { FaRegPlayCircle, FaRegPauseCircle  } from "react-icons/fa";
+
 import "./Player.scss";
 
 export const Player = () => {
@@ -26,8 +26,16 @@ export const Player = () => {
   return (
     <div className="pge">
       {playing ? (
+        <div id="musicPlayer">
+        <div className="barcontainer">
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
         <button className="play">
-          <FaPause
+          <FaRegPauseCircle
             style={{
               color: "white",
               background: "transparent",
@@ -37,9 +45,11 @@ export const Player = () => {
             onClick={music}
           />
         </button>
+        </div>
+        
       ) : (
         <button className="play">
-          <FaPlay
+          <FaRegPlayCircle
             style={{
               color: "white",
               background: "transparent",
