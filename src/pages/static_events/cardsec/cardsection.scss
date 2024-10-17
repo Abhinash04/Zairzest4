@@ -1,5 +1,5 @@
 .event-container {
-    padding: 2rem 5%;
+    padding: 2rem 10%;
     background-color: #111111;
     display: flex;
     justify-content: center;
@@ -10,7 +10,6 @@
         font-weight: 700;
         font-size: 60px;
         line-height: 72px;
-        // margin-left: 37px;
         color: #fff;
     }
 
@@ -66,5 +65,11 @@
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: auto;
         }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .event-container{
+        padding: 4rem 10%;
     }
 }
