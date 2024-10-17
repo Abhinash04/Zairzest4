@@ -70,6 +70,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .bottom-footer-text {
   p {
@@ -80,6 +81,7 @@
 .ico {
   background: transparent;
   color: black;
+  cursor: pointer;
 }
 .middle-footer-icons:hover {
   scale: 1.1;
@@ -99,7 +101,7 @@
   .middle-footer {
     flex-direction: column;
   }
-  .middle-footer-icon{
+  .middle-footer-icon {
     margin-top: 10px;
   }
   .bottom-footer {
@@ -151,6 +153,8 @@
   .middle-footer-icon {
     margin: auto;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .bottom-footer-text {
     margin: auto;

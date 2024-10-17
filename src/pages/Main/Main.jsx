@@ -38,25 +38,26 @@ const Main = () => {
               >
                 Cyber Forest
               </h1>
-
-              <ScrollLink
-                className="a"
-                to="events"
-                smooth={true}
-                duration={500}
-              >
-                <button className="btn-rn main-btn1">Explore Events</button>
-              </ScrollLink>
-              {!authToken && (
-                <Link className="a" to="/register">
-                  <button className="btn-rn main-btn2">Register Now</button>
-                </Link>
-              )}
-              {authToken && (
-                <Link className="a" to="/profile">
-                  <button className="btn-rn">Go to Profile</button>
-                </Link>
-              )}
+              <div className="btn-cntr">
+                <ScrollLink
+                  className="a"
+                  to="events"
+                  smooth={true}
+                  duration={500}
+                >
+                  <button className="btn-rn main-btn1">Explore Events</button>
+                </ScrollLink>
+                {!authToken && (
+                  <Link className="a" to="/register">
+                    <button className="btn-rn main-btn2">Register Now</button>
+                  </Link>
+                )}
+                {authToken && (
+                  <Link className="a" to="/profile">
+                    <button className="btn-rn">Go to Profile</button>
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
           <div className="right-part">
@@ -108,24 +109,24 @@ const Main = () => {
               out of the options available.
             </p>
             <div className="images-bottom">
-              <img
-                className="bottom-img bottom-img-fix1"
+              <div
+                className="bottom-img"
                 onClick={() => {
                   handleScroll("tech-events");
                 }}
-                src={techEvents}
-                alt=""
-                height={300}
-              />
-              <img
-                className="bottom-img bottom-img-fix2"
+              >
+                <h1 className="bi-txt">Tech Events</h1>
+                <p>Click to view</p>
+              </div>
+              <div
+                className="bottom-img"
                 onClick={() => {
                   handleScroll("fun-events");
                 }}
-                src={funEvents}
-                alt=""
-                height={300}
-              />
+              >
+                <h1 className="bi-txt">Fun Events</h1>
+                <p>Click to view</p>
+              </div>
             </div>
           </div>
         </div>

@@ -103,7 +103,8 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
   background: #111111;
   color: white;
   .zen-mid {
@@ -116,6 +117,27 @@
   }
 }
 
+.btn-cntr {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .btn-cntr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+}
+@media (max-width: 768px) {
+  .btn-cntr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
 //bottom portion
 
 .bottom-part {
@@ -143,6 +165,12 @@
   }
   .bottom-img {
     margin: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 2rem;
+    padding-bottom: 1.5rem;
   }
   .bottom-img:hover {
     scale: 1.1;
@@ -151,6 +179,22 @@
   .bottom-img:not(:hover) {
     scale: 1;
     transition: all 0.5s;
+  }
+  .images-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bottom-img:nth-child(1) {
+    background-image: url("../../assets/images/tech-events.webp");
+    background-size: cover;
+    background-position: center;
+  }
+  .bottom-img:nth-child(2) {
+    background-image: url("../../assets/images/fun-events.webp");
+    background-size: cover;
+    background-position: center;
   }
 }
 @media (min-width: 768px) {
@@ -170,6 +214,9 @@
   .bottom-img {
     width: 14rem;
     height: 9rem;
+  }
+  h1 {
+    font-size: 1.5rem;
   }
   .zen-image {
     height: 300px;
@@ -245,7 +292,7 @@
   }
 }
 
-@media (max-width: 938px) { 
+@media (max-width: 938px) {
   .top-part {
     height: 100vh;
     padding-top: 100px; /* Optional: Adjust this if you need space below the navbar */
@@ -312,9 +359,15 @@
 
 @media (max-width: 550px) {
   .mid-part {
+    margin-bottom: 14rem;
     .right-mid-part {
       width: 400px;
     }
+  }
+}
+@media (max-width: 500px) {
+  .mid-part {
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 748px) {

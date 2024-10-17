@@ -4,7 +4,10 @@ import zairzaLogo from "../../assets/images/zairza-logo.webp";
 import { LuGithub } from "react-icons/lu";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
-import { LuTwitter } from "react-icons/lu";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaFacebookF } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -20,17 +23,59 @@ const Footer = () => {
           </p>
         </div>
         <div className="middle-footer-icon">
-          <div className="middle-footer-icons">
-            <LuTwitter className="ico" />
+          <div
+            onClick={() => {
+              window.open("https://www.facebook.com/zairza.cetb ", "_blank");
+            }}
+            className="middle-footer-icons"
+          >
+            <FaFacebookF className="ico" />
           </div>
-          <div className="middle-footer-icons">
+          <div
+            onClick={() => {
+              window.open("https://x.com/zairza_cetb ", "_blank");
+            }}
+            className="middle-footer-icons"
+          >
+            <RiTwitterXFill className="ico" />
+          </div>
+          <div
+            onClick={() => {
+              window.open(
+                "https://www.youtube.com/@zairzarobosofdescluboutrb1825",
+                "_blank"
+              );
+            }}
+            className="middle-footer-icons"
+          >
+            <IoLogoYoutube className="ico" />
+          </div>
+          <div
+            onClick={() => {
+              window.open("mailto:cet.sac.zairza@gmail.com", "_blank");
+            }}
+            className="middle-footer-icons"
+          >
             <AiOutlineMail className="ico" />
           </div>
-          <div className="middle-footer-icons">
+          <div
+            onClick={() => {
+              window.open("https://www.instagram.com/zairza.outr/ ", "_blank");
+            }}
+            className="middle-footer-icons"
+          >
             <AiOutlineInstagram className="ico" />
           </div>
-          <div className="middle-footer-icons">
-            <LuGithub className="ico" />
+          <div
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/company/zairza/posts/?feedView=all ",
+                "_blank"
+              );
+            }}
+            className="middle-footer-icons"
+          >
+            <FaLinkedinIn className="ico" />
           </div>
         </div>
       </div>
