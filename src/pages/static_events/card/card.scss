@@ -1,111 +1,102 @@
 .card-container {
+  width: 360px;
+  height: 550px;
+  perspective: 1000px; // Creates the 3D space for the flip
+}
+
+.card {
+  width: 100%;
+  height: 100%;
   position: relative;
-  width: 340px;
-  min-height: 400px;
-  background-color: #1f1f1f;
+  transform-style: preserve-3d; // Ensures both sides are in the 3D space
+  transition: transform 0.6s ease; // Smooth flipping effect
 
-  .imgsec {
-    width: 100%;
-    height: fit-content;
-
-    img {
-      margin: 8px;
-      width: 322px;
-      height: 386px;
-    }
+  &.flipped {
+    transform: rotateY(180deg); // Flip the card when this class is added
   }
 
-  .nameenroll {
-    padding: 12px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 8px 8px 8px;
-    align-items: center;
-    color: #fff;
-
-    .ename {
-      font-weight: 600;
-      font-size: 18px;
-    }
-  }
-
-  .dtp {
-    padding: 12px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 8px 8px 8px;
-
-    .edate {
-      .etitle {
-        color: #c4c4c4;
-        font-weight: 500;
-        font-size: 13px;
-      }
-
-      .dtime {
-        color: #fff;
-        font-weight: 500;
-        font-size: 15px;
-      }
-    }
-  }
-
-  .overlay-card {
+  .card-face {
     position: absolute;
-    top: -200%;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0);
-    display: flex;
-    z-index: -10;
-    justify-content: center;
-    opacity: 0;
-    align-items: center;
-    transition: top 0.5s ease, opacity 0.5s ease;
-    border-radius: 10px;
+    backface-visibility: hidden; // Hide the back when flipping
 
-    &.show {
-      z-index: 1;
-      top: 0;
-      opacity: 1;
+    &.front {
+      background-color: #1f1f1f;
     }
 
-    .overlay-content {
+    &.back {
+      background-color: rgba(0, 0, 0, 0.85);
       color: white;
-      text-align: center;
-      padding: 5px;
-
-      p {
-        margin-bottom: 20px;
-        font-size: 16px;
-      }
-
-      .close-btn {
-        padding: 10px 20px;
-        background-color: #38ccff;
-        border: none;
-        color: #000;
-        cursor: pointer;
-        font-size: 16px;
-        border-radius: 10px;
-
-        &:hover {
-          opacity: 0.9;
-        }
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(180deg); // The back face is already flipped, ready to show on card flip
     }
   }
+}
 
-  @media (max-width: 768px) {
-    width: 330px;
+.imgsec img {
+  margin: 8px;
+  width: 344px;
+  height: 386px;
+}
 
-    .imgsec{
-      img {
-        margin: 8px;
-        width: 309px;
-        height: 356px;
-      }
+.nameenroll {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px 8px 8px;
+  align-items: center;
+  color: #fff;
+
+  .ename {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+.dtp {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 8px 8px 8px;
+
+  .edate {
+    .etitle {
+      color: #c4c4c4;
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .dtime {
+      color: #fff;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 20px;
+
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .close-btn {
+    padding: 10px 20px;
+    background-color: #38ccff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+
+    &:hover {
+      opacity: 0.9;
     }
   }
 }
