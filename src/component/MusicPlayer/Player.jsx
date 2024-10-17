@@ -55,7 +55,7 @@
 // };
 
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Player.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Make sure this is included
 
@@ -79,6 +79,13 @@ const Player = () => {
       setIsPlaying(false);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      audioRef.current.pause(); // Pause the audio when navigating away
+      setIsPlaying(false);
+    };
+  }, []);
 
   return (
     <div className="music-button">
