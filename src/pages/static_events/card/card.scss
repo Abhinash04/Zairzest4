@@ -2,7 +2,6 @@
   width: 360px;
   height: 550px;
   perspective: 1000px; // Creates the 3D space for the flip
-}
 
 .card {
   width: 100%;
@@ -23,10 +22,12 @@
 
     &.front {
       background-color: #1f1f1f;
+      border-radius: 10px;
     }
 
     &.back {
       background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 10px;
       color: white;
       display: flex;
       justify-content: center;
@@ -65,8 +66,8 @@
   .edate {
     .etitle {
       color: #c4c4c4;
-      font-weight: 500;
-      font-size: 13px;
+      font-weight: 400;
+      font-size: 12px;
     }
 
     .dtime {
@@ -99,4 +100,18 @@
       opacity: 0.9;
     }
   }
+}
+}
+
+@media screen and (max-width:769px) {
+  .card-container {
+    width: 300px;
+    height: 480px;
+  
+  .imgsec img {
+    margin: 8px;
+    width: 284px;
+    height: 326px;
+  }
+}
 }
