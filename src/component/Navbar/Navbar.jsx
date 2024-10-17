@@ -30,16 +30,8 @@ const Navbar = ({ userDetails }) => {
             <div className="navbar">
               <div className="navbar__left">
                 <Link to="/" onClick={close}>
-                  <img
-                    src={Logo}
-                    alt=""
-                    className="logo"
-                    style={{
-                      width: "210px",
-                      marginRight: "13px",
-                      background: "transparent",
-                    }}
-                  />
+                  <span className="zairzest-beyno-text">ZAIRZEST </span>
+                  <span className="fourO-text">4.0</span>
                 </Link>
               </div>
               <div className="navbar__right">

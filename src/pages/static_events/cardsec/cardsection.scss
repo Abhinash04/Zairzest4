@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 
     .mname {
         font-weight: 700;
@@ -47,14 +48,6 @@
     .mname {
         margin-left: 0;
         text-align: center;
-    }
-
-}
-
-@media (min-width: 860px) {
-
-    .mname {
-        margin-left: 37px;
     }
 
 }

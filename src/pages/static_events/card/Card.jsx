@@ -33,7 +33,7 @@ const Card = ({ d }) => {
         {/* Overlay card */}
         <div className={`overlay-card ${showOverlay ? 'show' : ''}`}>
           <div className="overlay-content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea qui ratione.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi sit quam repudiandae iusto molestiae quod perferendis ratione, molestias cum eius facilis quia rem quaerat aliquid officiis quae vitae tenetur!</p>
             <button className="close-btn" onClick={toggleOverlay}>
               Close
             </button>
