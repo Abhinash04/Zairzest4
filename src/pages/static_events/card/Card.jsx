@@ -3,44 +3,44 @@ import { useState } from 'react';
 import 'boxicons/css/boxicons.min.css';
 
 const Card = ({ d }) => {
-  const [showOverlay, setShowOverlay] = useState(false); // State to control the overlay visibility
+  const [isFlipped, setIsFlipped] = useState(false); // State to control card flip
 
-  const toggleOverlay = () => {
-    setShowOverlay(!showOverlay);
+  const toggleFlip = () => {
+    setIsFlipped(!isFlipped); // Toggle flip state
   };
 
   return (
-    <>
-      <div className="card-container">
-        <div className="imgsec">
-          <img src={require(`../../../assets/images/${d.event_name.split(" ")[0]}.webp`)} alt="event" />
-        </div>
-        <div className="nameenroll">
-          <div className="ename">{d.event_name}</div>
-          <i
-            className="bx bx-info-circle"
-            style={{ color: "#38ccff", fontSize: "23px", cursor: "pointer" }}
-            onClick={toggleOverlay}
-          ></i>
-        </div>
-        <div className="dtp">
-          <div className="edate">
-            <div className="etitle">Date & Time</div>
-            <div className="dtime">Coming Soon</div>
+    <div className="card-container">
+      <div className={`card ${isFlipped ? 'flipped' : ''}`}>
+        <div className="card-face front">
+          <div className="imgsec">
+            <img src={require(`../../../assets/images/${d.event_name.split(" ")[0]}.webp`)} alt="event" />
+          </div>
+          <div className="nameenroll">
+            <div className="ename">{d.event_name}</div>
+            <i
+              className="bx bx-info-circle"
+              style={{ color: "#38ccff", fontSize: "23px", cursor: "pointer" }}
+              onClick={toggleFlip}
+            ></i>
+          </div>
+          <div className="dtp">
+            <div className="edate">
+              <div className="etitle">Date & Time</div>
+              <div className="dtime">Coming Soon</div>
+            </div>
           </div>
         </div>
-
-        {/* Overlay card */}
-        <div className={`overlay-card ${showOverlay ? 'show' : ''}`}>
+        <div className="card-face back">
           <div className="overlay-content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi sit quam repudiandae iusto molestiae quod perferendis ratione, molestias cum eius facilis quia rem quaerat aliquid officiis quae vitae tenetur!</p>
-            <button className="close-btn" onClick={toggleOverlay}>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea qui ratione.</p>
+            <button className="close-btn" onClick={toggleFlip}>
               Close
             </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
