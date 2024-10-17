@@ -7,8 +7,8 @@ import "../authCSS/auth.scss";
 import Loginleft from "../../../component/loginLeft/Loginleft";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
-import scan from "../../../assets/images/scan.webp";
 import g_logo from "../../../assets/images/g_logo.png";
+import payment1 from "../../../assets/images/payment-Vaishnav.jpeg";
 
 const Register = () => {
   const [loading, setLoading] = useState(0);
@@ -118,12 +118,12 @@ const Register = () => {
               </span>
             </div>
             <div className="payment-part">
-              <img className="payment-image" src={scan} alt="" />
-              <div class="info-container">
+              <img className="payment-image" src={payment1} alt="" />
+              <div className="info-container">
                 <input type="checkbox" id="info-toggle" class="info-toggle" />
                 <label for="info-toggle" class="info-button">i</label>
   
-                <div class="info-content">
+                <div className="info-content">
                   <ul>
                     <li>Scan the QR to register</li>
                     <li>Take the screenshot and show it in Zairza inorder to get the Zen card</li>

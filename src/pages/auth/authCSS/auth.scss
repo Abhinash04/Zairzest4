@@ -138,6 +138,7 @@ input[type=number]::-webkit-outer-spin-button {
             align-items: center;
             .payment-image{
                 width: 200px;
+                clip-path: inset(60px 30px 50px 30px);
             }
             .payment-upload{
                 display: flex;
