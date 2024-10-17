@@ -121,7 +121,7 @@ const Register = () => {
               <img className="payment-image" src={payment1} alt="" />
               <div className="info-container">
                 <input type="checkbox" id="info-toggle" className="info-toggle" />
-                <label className="info-button">i</label>
+                <label htmlFor="info-toggle" className="info-button">i</label>
   
                 <div className="info-content">
                   <ul>
