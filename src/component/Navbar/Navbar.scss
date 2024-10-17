@@ -7,6 +7,7 @@
   font-family: BEYNO;
   src: url(../../assets/font/BEYNO.ttf);
 }
+
 @font-face {
   font-family: Mohave-bold;
   src: url(../../assets/font/Mohave-Light.ttf);
@@ -34,7 +35,7 @@
       font-size: 35.2px;
     }
 
-    .fourO-text{
+    .fourO-text {
       // color: ;
       font-family: 'Mohave-Bold';
       letter-spacing: 9px;
@@ -42,7 +43,7 @@
       color: #38ccff;
     }
 
-   
+
 
     a {
       text-decoration: none;
@@ -258,6 +259,7 @@
     .navbar_content_close {
       width: 40vw;
     }
+
   }
 
   @media (min-width: 900px) {
@@ -284,6 +286,13 @@
         display: none;
       }
     }
+
+    .navbar {
+      .zairzest-beyno-text,
+      .fourO-text {
+        font-size: 27px;
+      }
+    }
   }
 
   @media (max-width: 700px) {
@@ -295,6 +304,13 @@
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
         margin-left: 2rem;
+      }
+    }
+
+    .navbar {
+      .zairzest-beyno-text,
+      .fourO-text {
+        font-size: 24px;
       }
     }
 
@@ -319,6 +335,13 @@
         font-size: 1.5rem;
         margin-bottom: 2rem;
         margin-left: 2rem;
+      }
+    }
+
+    .navbar {
+      .zairzest-beyno-text,
+      .fourO-text {
+        font-size: 21px;
       }
     }
 
