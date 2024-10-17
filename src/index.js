@@ -9,12 +9,12 @@ import { PlayerProvider } from "./component/MusicPlayer/PlayerContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <PlayerProvider>
+  // <PlayerProvider>
     <BrowserRouter>
       <App />
       {/* <Player /> */}
-    </BrowserRouter>
-  </PlayerProvider>
+    </BrowserRouter>,
+  {/* </PlayerProvider> */}
 );
 
 // If you want to start measuring performance in your app, pass a function
