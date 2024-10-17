@@ -27,7 +27,7 @@ const App = () => {
       handleRouteChangeStart();
       setTimeout(() => {
         handleRouteChangeEnd();
-      }, 1700);
+      }, 1500);
     };
 
     unlisten();
