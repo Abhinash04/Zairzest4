@@ -16,6 +16,9 @@
 .sub_nav {
   display: flex;
   height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 
   .navbar {
     background: #111111;
@@ -30,20 +33,18 @@
     z-index: 5;
 
     .zairzest-beyno-text {
-      font-family: 'BEYNO';
+      font-family: "BEYNO";
       letter-spacing: 9px;
       font-size: 35.2px;
     }
 
     .fourO-text {
       // color: ;
-      font-family: 'Mohave-Bold';
+      font-family: "Mohave-Bold";
       letter-spacing: 9px;
       font-size: 35.2px;
       color: #38ccff;
     }
-
-
 
     a {
       text-decoration: none;
@@ -259,7 +260,6 @@
     .navbar_content_close {
       width: 40vw;
     }
-
   }
 
   @media (min-width: 900px) {
