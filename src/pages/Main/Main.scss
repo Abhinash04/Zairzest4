@@ -445,9 +445,11 @@
 }
 
 //music
-.music {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  right: 0;
+
+@media (max-width: 939px) {
+  .music{
+    position: absolute;
+    top: 85%;
+    left: 85%;
+  }
 }

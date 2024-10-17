@@ -75,6 +75,18 @@
         margin-top: 7rem;
     }
 }
+.music{
+    overflow: visible;
+    position: absolute;
+    top: 85%;
+    left: 85%;
+}
+@media (max-width: 939px) {
+    .music{
+      top: 85%;
+      left: 83%;
+    }
+  }
 
 @media (max-width: 680px) {
     .About-us-frame {

@@ -4,17 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { Player } from "./component/MusicPlayer/Player";
+import Player from "./component/MusicPlayer/Player";
 import { PlayerProvider } from "./component/MusicPlayer/PlayerContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <PlayerProvider>
+  // <PlayerProvider>
     <BrowserRouter>
       <App />
-      <Player />
+      {/* <Player /> */}
     </BrowserRouter>
-  </PlayerProvider>
+  // </PlayerProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function

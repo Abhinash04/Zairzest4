@@ -9,7 +9,7 @@ import funEvents from "../../assets/images/fun-events.webp";
 import Footer from "../../component/Footer/Footer";
 import Navbar from "../../component/Navbar/Navbar";
 import { Link as ScrollLink } from "react-scroll";
-import { Player } from "../../component/MusicPlayer/Player";
+import Player from "../../component/MusicPlayer/Player";
 
 const Main = () => {
   const authToken = sessionStorage.getItem("Auth Token");

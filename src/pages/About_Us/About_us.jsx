@@ -2,7 +2,8 @@ import React from 'react'
 import './About_us.scss'
 import Navbar from '../../component/Navbar/Navbar';
 import Footer from '../../component/Footer/Footer';
-import { Player } from "../../component/MusicPlayer/Player";
+import { Link, useNavigate } from "react-router-dom";
+import Player from '../../component/MusicPlayer/Player';
 import frame_1 from '../../assets/images/frame-1.png';
 import frame_2 from '../../assets/images/frame-2.png';
 import frame_3 from '../../assets/images/frame-3.png';
@@ -12,9 +13,7 @@ const About_us = () => {
   return (
     <div className='background'>
       <Navbar />
-      <div className="music">
-        <Player />
-      </div>
+      
       <div className='About-us'>
         <div className='About-us-content'>
           <h1 className='About-us-header'>Zairza: Igniting Innovation</h1>
@@ -28,6 +27,9 @@ const About_us = () => {
             <img src={frame_3} alt="" />
             <img src={frame_4} alt="" />
           </div>
+          <div className="music">
+        <Player />
+      </div>
         </div>
       </div>
       <Footer /> 
