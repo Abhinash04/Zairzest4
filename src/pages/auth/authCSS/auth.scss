@@ -7,19 +7,22 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .login-left-container{
     width: 150rem;
+    min-height: screen;
     background: transparent;
 }
 .auth-container{
     display: flex;
-    width: 100vw;
+    width: 100%;
+    height: 100vh;
     align-items: center;
-    justify-content: center;
+    justify-content: center;;
 
 .auth-box-container{
     display: flex;
     justify-content: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin: 3rem;
+    // margin-left: 3rem;
+    // margin-right: 3rem;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -28,12 +31,12 @@ input[type=number]::-webkit-outer-spin-button {
         padding-right: 1rem;
 
         .auth-heading{
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #38CCFF;
             margin-bottom: 0.2rem;
         }
         .auth-head-bottom{
-            font-size:1rem;
+            font-size:1.1rem;
             color:#858585;
         }
         .auth-input{
@@ -56,14 +59,14 @@ input[type=number]::-webkit-outer-spin-button {
             font-size: 1.2rem;
         }
         .auth-buttons{
-            margin-top: 2rem;
+            margin-top: 0rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 1rem;
         }
         .auth-buttons .or{
-            margin-top: 1.25rem;
+            margin-top: 1rem;
         }
         .auth-sbutton{
             margin-top:1rem;
@@ -109,21 +112,22 @@ input[type=number]::-webkit-outer-spin-button {
         .auth-bottom-text{
             display: flex;
             margin-top: 1rem;
-            font-size:0.9rem;
+            font-size:0.95rem;
             color:#858585;
             a{
-                text-decoration: none;
+                margin-left: 0.3rem;
+                text-decoration: underline;
                 color: #38CCFF;
             }
         }
         .auth-bottom-text-2{
             display: flex;
-            
             margin-top: 0.3rem;
-            font-size:0.9rem;
+            font-size:0.95rem;
             color:#858585;
             a{
-                text-decoration: none;
+                margin-left: 0.3rem;
+                text-decoration: underline;
                 white-space: nowrap;
                 color: #38CCFF;
             }
@@ -137,8 +141,7 @@ input[type=number]::-webkit-outer-spin-button {
             justify-content: center;
             align-items: center;
             .payment-image{
-                width: 200px;
-                clip-path: inset(60px 30px 50px 30px);
+                width: 150px;
             }
             .payment-upload{
                 display: flex;
@@ -150,7 +153,7 @@ input[type=number]::-webkit-outer-spin-button {
             .info-container {
                 position: relative;
                 display: inline-block;
-                margin-bottom: 11rem;
+                margin-bottom: 9rem;
               }
               
               .info-button {
@@ -170,7 +173,7 @@ input[type=number]::-webkit-outer-spin-button {
                 position: absolute;
                 right: 0;
                 
-                background-color: #f9f9f9;
+                background-color: #ffffff;
                 padding: 15px;
                 margin-top: 10px;
                 border-radius: 5px;

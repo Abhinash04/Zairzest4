@@ -4,9 +4,10 @@ import Navbar from '../../component/Navbar/Navbar';
 import Footer from '../../component/Footer/Footer';
 import { Link, useNavigate } from "react-router-dom";
 import { Player } from "../../component/MusicPlayer/Player";
-// import about from '../../../assets/about-us.jpg'
-// import g_logo from "../../../assets/images/g_logo.png";
-import About from '../../assets/images/images';
+import frame_1 from '../../assets/images/frame-1.png';
+import frame_2 from '../../assets/images/frame-2.png';
+import frame_3 from '../../assets/images/frame-3.png';
+import frame_4 from '../../assets/images/frame-4.png';
 
 const About_us = () => {
   return (
@@ -15,6 +16,7 @@ const About_us = () => {
         <div className="music">
               <Player />
         </div>
+        <div className='About-us'>
         <div className='About-us-content'>
             <h1 className='About-us-header'>Zairza: Igniting Innovation</h1>
 
@@ -26,10 +28,15 @@ const About_us = () => {
 
             <p>Join Zairza and be part of a legacy of innovation. Together, we'll shape the future of technology.</p>
             <div className='About-us-frame'>
-                <img src={About} alt="" />
+                <img src={frame_1} alt="" />
+                <img src={frame_2} alt="" />
+                <img src={frame_3} alt="" />
+                <img src={frame_4} alt="" />
             </div>
             
         </div>
+        </div>
+        
         
         <Footer />
         
