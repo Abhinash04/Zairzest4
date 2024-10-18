@@ -16,7 +16,12 @@
     background: #38ccff;
   }
 }
-
+.home .music{
+    position: absolute;
+    margin-top: 10rem ;
+    margin-right: 3rem;
+    z-index: 1000;
+}
 @media (max-width: 1016px) {
   .btn-cntr {
     display: flex;
@@ -450,7 +455,7 @@
 //music
 .music{
   position: absolute;
-  margin-top: 10rem ;
+  margin-top: 2rem ;
   margin-right: 3rem;
   z-index: 1000;
 }
