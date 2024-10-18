@@ -16,7 +16,12 @@
     background: #38ccff;
   }
 }
-
+.home .music{
+    position: absolute;
+    margin-top: 7rem ;
+    margin-right: 3rem;
+    z-index: 1000;
+}
 @media (max-width: 1016px) {
   .btn-cntr {
     display: flex;
@@ -219,6 +224,14 @@
     background-position: center;
   }
 }
+.images-bottom h1{
+      color: white;
+      text-shadow: 
+        0 0 10px rgba(0, 0, 0, 1.9),
+        0 0 20px rgba(0, 0, 0, 1.9),
+        0 0 30px rgba(0, 0, 0, 3),
+    }
+
 @media (min-width: 768px) {
   .bottom-img {
     width: 31.5rem;
@@ -448,7 +461,12 @@
 }
 
 //music
-
+.music{
+  position: absolute;
+  margin-top: 2rem ;
+  margin-right: 3rem;
+  z-index: 1000;
+}
 @media (max-width: 939px) {
   .music {
     position: absolute;

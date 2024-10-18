@@ -104,7 +104,7 @@ const Main = () => {
                 }}
                 data-aos="flip-left"
               >
-                <h1 className="bi-txt">Tech Events</h1>
+                <h1 className="bi_txt">Tech Events</h1>
                 <p>Click to view</p>
               </div>
               <div
@@ -114,7 +114,7 @@ const Main = () => {
                 }}
                 data-aos="flip-right"
               >
-                <h1 className="bi-txt">Fun Events</h1>
+                <h1 className="bi_txt">Fun Events</h1>
                 <p>Click to view</p>
               </div>
             </div>
