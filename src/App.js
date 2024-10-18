@@ -47,7 +47,8 @@ const App = () => {
           height: '100vh',
           width: '100%',
           backgroundColor: '#000',
-          zIndex: '10000',
+          position:'relative',
+          zIndex: '100000',
         }}>
           <Blocks
             height="80"
