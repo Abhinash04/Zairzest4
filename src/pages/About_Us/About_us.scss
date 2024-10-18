@@ -78,17 +78,29 @@
 .music{
     overflow: visible;
     position: absolute;
-    top: 85%;
-    left: 85%;
+    top: 95%;
+    left: 90%;
 }
 @media (max-width: 939px) {
     .music{
-      top: 85%;
-      left: 83%;
+      top: 95%;
+      left: 85%;
     }
   }
 
+@media (max-width: 939px) {
+  .music{
+    top: 98%;
+    left: 85%;
+  }
+}
+
 @media (max-width: 680px) {
+    .music{
+        top: 95%;
+        left: 85%;
+      }
+
     .About-us-frame {
         display: flex;
         flex-direction: column;
@@ -101,6 +113,12 @@
     }
 
     @media (max-width: 600px) {
+
+        .music{
+            top: 95%;
+            left: 85%;
+          }
+
         .About-us-content {
             margin: 0;
             padding-left: 1.2rem;
@@ -117,5 +135,12 @@
                 margin-bottom: 1rem;
             }
         }
+    }
+
+    @media (max-width: 500px){
+        .music{
+            top: 98%;
+            left: 81%;
+          }
     }
 }
