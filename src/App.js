@@ -38,10 +38,12 @@ const App = () => {
     <div>
       {loading && (
           <div style={{
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: '#000',
+            height: '100vh',
+            width: '100%'
           }}>
             <Blocks
             height="80"
