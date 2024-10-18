@@ -448,7 +448,12 @@
 }
 
 //music
-
+.music{
+  position: absolute;
+  margin-top: 10rem ;
+  margin-right: 3rem;
+  z-index: 1000;
+}
 @media (max-width: 939px) {
   .music {
     position: absolute;
