@@ -59,7 +59,7 @@ const Main = () => {
               </div>
             </div>
           </div>
-          <div className="right-part" data-aos="fade-left">
+          <div className="right-part">
             <div className="music">
               <Player />
             </div>
