@@ -9,6 +9,7 @@ import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import g_logo from "../../../assets/images/g_logo.png";
 import payment1 from "../../../assets/images/payment-Vaishnav.jpeg";
+import '../register/Register.scss'
 
 const Register = () => {
   const [loading, setLoading] = useState(0);

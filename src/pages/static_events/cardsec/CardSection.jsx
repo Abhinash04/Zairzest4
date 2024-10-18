@@ -29,9 +29,6 @@ const CardSection = ({ type }) => {
           ))}
           {filteredData?.length === 0 && <p>No events to display</p>}
         </div>
-        <div className="music" data-aos="slide-left">
-          <Player />
-        </div>
       </div>
     </>
   );

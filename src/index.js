@@ -12,7 +12,9 @@ root.render(
   // <PlayerProvider>
     <BrowserRouter>
       <App />
-      {/* <Player /> */}
+      <div className="music">
+        <Player />
+      </div>
     </BrowserRouter>
   // </PlayerProvider>,
 );

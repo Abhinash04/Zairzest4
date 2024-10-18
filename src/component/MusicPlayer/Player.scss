@@ -5,6 +5,15 @@ body {
 
 .music-button{
   position: fixed;
+  right: 8%;
+  bottom: 7%;
+  z-index: -1;
+}
+
+@media (max-width: 570px) {
+  .music-button{
+    right: 12%;
+  }
 }
 .wrapper {
   display: inline-block;

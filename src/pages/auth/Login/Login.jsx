@@ -55,7 +55,9 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container">
+    <div
+      style={{zIndex: 1000}}
+      className="auth-container">
       <Loginleft className="left-container" />
       <div className="auth-box-container">
         <div className="auth-box">
