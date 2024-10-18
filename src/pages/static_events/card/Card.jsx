@@ -42,7 +42,7 @@ const Card = ({ d }) => {
         </div>
         <div className="card-face back" data-aos="fade-up">
           <div className="overlay-content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea qui ratione.</p>
+            <p style={{fontSize: '21px'}}>Coming Soon</p>
             <button className="close-btn" onClick={toggleFlip}>
               Close
             </button>

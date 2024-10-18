@@ -63,6 +63,14 @@ const Player = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio(require("../../assets/Music/darkside.mp3"))); // Reference to the audio element
 
+  useEffect(() => {
+    audioRef.current.loop = true; // Enable looping
+    return () => {
+      audioRef.current.pause(); // Pause when unmounting
+    };
+  }, []);
+  
+
   const handlePlayPause = () => {
     const audio = audioRef.current;
 

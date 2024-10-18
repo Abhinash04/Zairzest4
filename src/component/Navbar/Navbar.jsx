@@ -36,7 +36,7 @@ const Navbar = ({ userDetails }) => {
               </div>
               <div className="navbar__right">
                 <Link to="/about-us">
-                  <h4 className="navbar__text">About US</h4>
+                  <h4 className="navbar__text">About Us</h4>
                 </Link>
                 {authToken ? (
                   ""
