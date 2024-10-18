@@ -36,9 +36,7 @@ const About_us = () => {
             <img src={frame_3} alt="" />
             <img src={frame_4} alt="" />
           </div>
-          <div className="music" data-aos="fade-left">
-            <Player />
-          </div>
+          
         </div>
       </div>
       <Footer /> 

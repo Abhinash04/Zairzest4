@@ -31,11 +31,11 @@ const App = () => {
     };
 
     unlisten();
-    return () => {};
+    return () => { };
   }, [location]);
 
   // Exclude the Player component on register, login, and loader pages
-  const excludePlayerPaths = ['/register', '/login']; 
+  const excludePlayerPaths = ['/register', '/login'];
 
   return (
     <div>
@@ -44,10 +44,10 @@ const App = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: '#000',
           height: '100vh',
           width: '100%',
-          zIndex: '10000'
+          backgroundColor: '#000',
+          zIndex: '10000',
         }}>
           <Blocks
             height="80"
@@ -61,17 +61,18 @@ const App = () => {
             left="50%"
             top="50%"
           />
+          
         </div>
       )}
 
       {!loading && (
         <>
           {/* Conditionally render Player if not on login or register pages */}
-          {!excludePlayerPaths.includes(location.pathname) && <Player />}
+          {/* {!excludePlayerPaths.includes(location.pathname) && } */}
 
           <Routes>
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<><Register /><Player /></>} />
+            <Route path="/login" element={<><Login /><Player /></>} />
             <Route path="/" element={<Main />} />
             <Route path="/profile" element={<Profile />} />
             <Route path='/home-tech-events' element={<StaticEvents type="Tech Events" />} />
@@ -84,6 +85,8 @@ const App = () => {
           </Routes>
         </>
       )}
+
+
     </div>
   );
 };

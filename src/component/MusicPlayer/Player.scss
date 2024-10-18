@@ -7,7 +7,6 @@ body {
   position: fixed;
   right: 8%;
   bottom: 7%;
-  // z-index: -1;
 }
 
 @media (max-width: 570px) {
@@ -20,7 +19,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%)
+  transform: translate(-50%,-50%);
 }
 
 .video-main {
