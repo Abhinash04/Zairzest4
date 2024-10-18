@@ -80,18 +80,19 @@
 .music{
     overflow: visible;
     position: absolute;
-    top: 93.5%;
+    top: 96%;
     left: 100%;
 }
 @media (max-width: 1248px) {
     .music{
       left: 95%;
+      top: 96%;
     }
   }
 
 @media (max-width: 939px) {
   .music{
-    top: 94%;
+    top: 97%;
     left: 92%;
   }
 }
@@ -104,7 +105,7 @@
 
 @media (max-width: 680px) {
     .music{
-        top: 96.5%;
+        top: 97.5%;
         left: 85%;
       }
 
@@ -123,7 +124,7 @@
 @media (max-width: 600px) {
 
     .music{
-        top: 96.5%;
+        top: 97.5%;
         left: 85%;
       }
 
@@ -147,7 +148,7 @@
 
 @media (max-width: 500px){
     .music{
-        top: 96.5%;
+        top: 97.5%;
         left: 81%;
       }
 }
