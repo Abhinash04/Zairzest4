@@ -28,6 +28,11 @@
         color: gray;
         font-weight: bold;
     }
+    .music {
+        position: absolute;
+        top: 94%;
+        left: 94%;
+    }
 
     @media (max-width: 1350px) {
         .mname {
@@ -39,6 +44,17 @@
         .card-contain {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
+        }
+    }
+    @media (max-width: 890px) {
+        .music {
+            left: 92%;
+        }
+    }
+    @media (max-width: 760px) {
+        .music {
+            top: 98%;
+            left: 91%;
         }
     }
 
@@ -67,11 +83,6 @@
             grid-template-rows: auto;
         }
     }
-}
-.music
-{
-    top: 95%;
-    left: 85%;
 }
   
 @media screen and (max-width:600px) {

@@ -79,26 +79,31 @@
 .music{
     overflow: visible;
     position: absolute;
-    top: 95%;
-    left: 90%;
+    top: 96%;
+    left: 100%;
 }
-@media (max-width: 939px) {
+@media (max-width: 1248px) {
     .music{
-      top: 95%;
-      left: 85%;
+      left: 95%;
     }
   }
 
 @media (max-width: 939px) {
   .music{
-    top: 98%;
+    top: 97%;
+    left: 85%;
+  }
+}
+@media (max-width: 769px) {
+  .music{
+    top: 98.5%;
     left: 85%;
   }
 }
 
 @media (max-width: 680px) {
     .music{
-        top: 95%;
+        top: 98%;
         left: 85%;
       }
 
@@ -113,35 +118,35 @@
         }
     }
 
-    @media (max-width: 600px) {
+}
+@media (max-width: 600px) {
 
-        .music{
-            top: 95%;
-            left: 85%;
-          }
+    .music{
+        top: 98%;
+        left: 85%;
+      }
 
-        .About-us-content {
-            margin: 0;
-            padding-left: 1.2rem;
-            padding-right: 1.2rem;
-        }
-
-        .About-us-frame {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            img {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-        }
+    .About-us-content {
+        margin: 0;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
 
-    @media (max-width: 500px){
-        .music{
-            top: 98%;
-            left: 81%;
-          }
+    .About-us-frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }
+}
+
+@media (max-width: 500px){
+    .music{
+        top: 98%;
+        left: 81%;
+      }
 }
