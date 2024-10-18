@@ -60,9 +60,6 @@ const Main = () => {
             </div>
           </div>
           <div className="right-part">
-            <div className="music">
-              <Player />
-            </div>
           </div>
         </div>
 
