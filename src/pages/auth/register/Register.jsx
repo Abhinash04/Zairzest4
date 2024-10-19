@@ -41,7 +41,7 @@ const Register = () => {
         return;
       }
 
-      const rturl = "https://web-backend-3bsv.onrender.com/create/user";
+      const rturl = "https://zairzest-backend-2024.onrender.com/create/user";
       const res = await axios.post(rturl, registerData, {
         headers: {
           "Content-Type": `application/json`,

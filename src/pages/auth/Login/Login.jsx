@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "../authCSS/auth.scss";
 import Loginleft from "../../../component/loginLeft/Loginleft";
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import g_logo from "../../../assets/images/g_logo.png";
 // import { Player } from "../../../component/MusicPlayer/Player";
 
@@ -13,7 +13,7 @@ const Login = () => {
   const [loading, setLoading] = useState(0);
   const [eye, setEye] = useState(true);
   const [type, setType] = useState("password"); // Correct "password" type here
-  
+
   const handleEyeClick = () => {
     setType(eye ? "text" : "password"); // Toggle between 'text' and 'password'
     setEye(!eye); // Toggle the eye state
@@ -29,7 +29,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(1);
     try {
-      const luser = "https://web-backend-3bsv.onrender.com/login/user";
+      const luser = "https://zairzest-backend-2024.onrender.com/login/user";
       const res = await axios.post(luser, loginData);
       const token = res.data?.token;
       sessionStorage.setItem("Auth Token", token);
@@ -55,9 +55,7 @@ const Login = () => {
   };
 
   return (
-    <div
-      style={{zIndex: 1000}}
-      className="auth-container">
+    <div style={{ zIndex: 1000 }} className="auth-container">
       <Loginleft className="left-container" />
       <div className="auth-box-container">
         <div className="auth-box">
@@ -93,19 +91,20 @@ const Login = () => {
                 )}
               </span>
             </div>
-          </form>
-          <div className="auth-bottom-text">
-            Don't remember Password ? <Link to="/register">Reset Password</Link>
-          </div>
-          <div className="auth-bottom-text-2">
-            Not a Member yet ? <Link to="/register">Sign Up</Link>
-          </div>
-          <div className="auth-buttons">
-            <button type="submit" className="auth-sbutton">
-              {" "}
-              {loading===0?"Sign Up":"Please Wait"}
-            </button>
+            <div className="auth-bottom-text">
+              Don't remember Password ?{" "}
+              <Link to="/register">Reset Password</Link>
             </div>
+            <div className="auth-bottom-text-2">
+              Not a Member yet ? <Link to="/register">Sign Up</Link>
+            </div>
+            <div className="auth-buttons">
+              <button type="submit" className="auth-sbutton">
+                {" "}
+                {loading === 0 ? "Sign In" : "Please Wait"}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <ToastContainer theme="colored" />
