@@ -11,6 +11,7 @@ import g_logo from "../../../assets/images/g_logo.png";
 import payment1 from "../../../assets/images/payment-Vaishnav.jpeg";
 import '../register/Register.scss'
 
+
 const Register = () => {
   const [loading, setLoading] = useState(0);
   const [eye, setEye] = useState(true);
@@ -41,7 +42,7 @@ const Register = () => {
         return;
       }
 
-      const rturl = "https://zairzest-backend-2024.onrender.com/create/user";
+      const rturl = process.env.REACT_APP_API_RTURL;
       const res = await axios.post(rturl, registerData, {
         headers: {
           "Content-Type": `application/json`,

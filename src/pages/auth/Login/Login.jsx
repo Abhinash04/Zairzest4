@@ -29,7 +29,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(1);
     try {
-      const luser = "https://zairzest-backend-2024.onrender.com/login/user";
+      const luser = process.env.REACT_APP_API_LUSER;
       const res = await axios.post(luser, loginData);
       const token = res.data?.token;
       sessionStorage.setItem("Auth Token", token);
