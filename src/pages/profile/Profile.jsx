@@ -2,12 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import Footer from '../../component/Footer/Footer'
 import Navbar from '../../component/Navbar/Navbar'
-import CardSection from "../../component/cardsec/CardSection";
 import './Profile.scss'
+
+const images = [
+  require('../../assets/images/Robo.webp'),
+  require('../../assets/images/CP.webp'),
+  require('../../assets/images/PVP.webp'),
+  require('../../assets/images/Twister.webp')
+];
 
 const Profile = () => {
   const [data, setData] = useState();
-  const [userDetails, setUserDetails] = useState()
+  const [userDetails, setUserDetails] = useState();
+  const [profileImage, setProfileImage] = useState();
 
   const fetchData = async () => {
     const authToken = sessionStorage.getItem('Auth Token')
@@ -40,27 +47,23 @@ const Profile = () => {
   }
 
   useEffect(() => {
-    fetchData()
-  }, [])
+    fetchData();
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    setProfileImage(randomImage);
+  }, []);
 
   return (
     <div>
       <Navbar />
       <div className="profile_container">
-        <div className="profile_head">
-          <div className="profile_details">
-            <h2>{userDetails?.name}</h2>
-            <p className="profile_para">Regd no : {userDetails?.regdno}</p>
-          </div>
-          <div className="profile_zencode">
-            <div className="zencode_details">
-              Zen code : {userDetails?.zencode}
-            </div>
+        <div className="profile-box">
+          <div className="profilesubitem1" style={{ backgroundImage: `url(${profileImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="profilesubitem2">
+            <h1>Abhinash Pritiraj</h1>
+            <span>ZEN-2211100553</span>
           </div>
         </div>
       </div>
-      <CardSection name="Your registered events" data={data} userEvents={userDetails?.events} />
-      <CardSection name="Explore more events" data={data} userEvents={userDetails?.events} />
       <Footer />
     </div>
   );
