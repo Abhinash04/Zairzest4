@@ -38,12 +38,13 @@ const Navbar = ({ userDetails }) => {
                 <Link to="/about-us">
                   <h4 className="navbar__text">About Us</h4>
                 </Link>
-                {authToken ? (
-                  ""
-                ) : (
+                {!authToken && (
                   <Link to="/register">
                     <h4 className="navbar__text">Register</h4>
                   </Link>
+                )}
+                {authToken && userDetails && (
+                  <h4 className="navbar__text">{userDetails.firstname}</h4>
                 )}
                 {!authToken && (
                   <Link to="/login">
@@ -86,12 +87,15 @@ const Navbar = ({ userDetails }) => {
                 <Link to="/about-us" className="aboutUs-link">
                   <div className="nav-button-content">About Us</div>
                 </Link>
-                {authToken ? (
-                  ""
-                ) : (
+                {!authToken && (
                   <Link to="/register" className="aboutUs-link" onClick={close}>
                     <div className="nav-button-content">Register</div>
                   </Link>
+                )}
+                {authToken && userDetails && (
+                  <div className="nav-button-content">
+                    Hi, {userDetails.firstname}
+                  </div>
                 )}
                 {!authToken && (
                   <Link className="aboutUs-link" to="/login">
