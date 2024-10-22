@@ -4,17 +4,13 @@ import Footer from '../../component/Footer/Footer'
 import Navbar from '../../component/Navbar/Navbar'
 import './Profile.scss'
 
-const images = [
-  require('../../assets/images/Robo.webp'),
-  require('../../assets/images/CP.webp'),
-  require('../../assets/images/PVP.webp'),
-  require('../../assets/images/Twister.webp')
-];
+const LazyFooter = React.lazy(() => import('../../component/Footer/Footer'));
+const LazyNavbar = React.lazy(() => import('../../component/Navbar/Navbar'));
 
-const Profile = () => {
+const Profile = ({username="Abhinash Pritiraj",zen_id="2211100553"}) => {
   const [data, setData] = useState();
   const [userDetails, setUserDetails] = useState();
-  const [profileImage, setProfileImage] = useState();
+  const [profileImage, setProfileImage] = useState(null);
 
   const fetchData = async () => {
     const authToken = sessionStorage.getItem('Auth Token')
@@ -48,23 +44,32 @@ const Profile = () => {
 
   useEffect(() => {
     fetchData();
-    const randomImage = images[Math.floor(Math.random() * images.length)];
-    setProfileImage(randomImage);
+    const loadImage = async () => {
+      const randomImage = await import(`../../assets/images/avatar${zen_id%10}.jpg`);
+      setProfileImage(randomImage.default);
+    };
+    loadImage();
   }, []);
 
   return (
     <div>
-      <Navbar />
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <LazyNavbar />
+      </React.Suspense>
       <div className="profile_container">
         <div className="profile-box">
-          <div className="profilesubitem1" style={{ backgroundImage: `url(${profileImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          {profileImage && (
+            <div className="profilesubitem1" style={{ backgroundImage: `url(${profileImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          )}
           <div className="profilesubitem2">
-            <h1>Abhinash Pritiraj</h1>
-            <span>ZEN-2211100553</span>
+            <h1>{username}</h1>
+            <span>ZEN-{zen_id}</span>
           </div>
         </div>
       </div>
-      <Footer />
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <LazyFooter />
+      </React.Suspense>
     </div>
   );
 };
