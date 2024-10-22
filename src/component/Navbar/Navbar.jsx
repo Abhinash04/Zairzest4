@@ -44,7 +44,7 @@ const Navbar = ({ userDetails }) => {
                   </Link>
                 )}
                 {authToken && userDetails && (
-                  <h4 className="navbar__text">{userDetails.firstname}</h4>
+                  <h4 className="navbar__text">Hi, {userDetails.firstname}</h4>
                 )}
                 {!authToken && (
                   <Link to="/login">
