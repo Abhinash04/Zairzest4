@@ -8,7 +8,7 @@ import StaticEvents from './pages/static_events/StaticEvents';
 import Main from './pages/Main/Main';
 import About_us from './pages/About_Us/About_us';
 import { Blocks } from 'react-loader-spinner';
-import Player from './component/MusicPlayer/Player'; // Import Player component
+import Player from './component/MusicPlayer/Player'; // Import Player component.
 
 const App = () => {
   const [loading, setLoading] = useState(false);
