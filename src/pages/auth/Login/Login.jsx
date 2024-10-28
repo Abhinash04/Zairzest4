@@ -7,7 +7,9 @@ import "../authCSS/auth.scss";
 import Loginleft from "../../../component/loginLeft/Loginleft";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import g_logo from "../../../assets/images/g_logo.png";
+import { Button } from "react-scroll";
 // import { Player } from "../../../component/MusicPlayer/Player";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [loading, setLoading] = useState(0);
@@ -53,6 +55,11 @@ const Login = () => {
   const handleLoginChange = (e) => {
     setloginData({ ...loginData, [e.target.name]: e.target.value });
   };
+  const handleResetPasswordClick = () => {
+    toast.info("Visit Zairza !", {
+      theme: "dark",
+    });
+  };
 
   return (
     <div style={{ zIndex: 1000 }} className="auth-container">
@@ -93,7 +100,12 @@ const Login = () => {
             </div>
             <div className="auth-bottom-text">
               Don't remember Password ?{" "}
-              <Link to="/register">Reset Password</Link>
+              <Button
+                className="forget-pass"
+                onClick={handleResetPasswordClick}
+              >
+                Reset Password
+              </Button>
             </div>
             <div className="auth-bottom-text-2">
               Not a Member yet ? <Link to="/register">Sign Up</Link>
