@@ -8,17 +8,16 @@ import Loginleft from "../../../component/loginLeft/Loginleft";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import g_logo from "../../../assets/images/g_logo.png";
 import { Button } from "react-scroll";
-// import { Player } from "../../../component/MusicPlayer/Player";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [loading, setLoading] = useState(0);
   const [eye, setEye] = useState(true);
-  const [type, setType] = useState("password"); // Correct "password" type here
+  const [type, setType] = useState("password");
 
   const handleEyeClick = () => {
-    setType(eye ? "text" : "password"); // Toggle between 'text' and 'password'
-    setEye(!eye); // Toggle the eye state
+    setType(eye ? "text" : "password");
+    setEye(!eye);
   };
 
   const nav = useNavigate();
@@ -56,7 +55,7 @@ const Login = () => {
     setloginData({ ...loginData, [e.target.name]: e.target.value });
   };
   const handleResetPasswordClick = () => {
-    toast.info("Visit Zairza !", {
+    toast.info("Visit Zairza!", {
       theme: "dark",
     });
   };
@@ -83,7 +82,7 @@ const Login = () => {
             <div className="input-div">
               <input
                 className="auth-input"
-                type={type} // Using the dynamic type here
+                type={type}
                 required
                 name="password"
                 value={loginData.password}
@@ -99,7 +98,7 @@ const Login = () => {
               </span>
             </div>
             <div className="auth-bottom-text">
-              Don't remember Password ?{" "}
+              Don't remember Password?{" "}
               <Button
                 className="forget-pass"
                 onClick={handleResetPasswordClick}
@@ -108,7 +107,7 @@ const Login = () => {
               </Button>
             </div>
             <div className="auth-bottom-text-2">
-              Not a Member yet ? <Link to="/register">Sign Up</Link>
+              Not a Member yet? <Link to="/register">Sign Up</Link>
             </div>
             <div className="auth-buttons">
               <button type="submit" className="auth-sbutton">

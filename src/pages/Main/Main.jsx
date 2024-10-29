@@ -53,7 +53,7 @@ const Main = () => {
                 )}
                 {authToken && (
                   <Link className="a" to="/profile">
-                    <button className="btn-rn">Go to Profile</button>
+                    <button className="btn-rn main-btn2">Go to Profile</button>
                   </Link>
                 )}
               </div>

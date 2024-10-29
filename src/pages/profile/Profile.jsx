@@ -13,7 +13,7 @@ const Profile = () => {
   const fetchData = async () => {
     const authToken = sessionStorage.getItem('Auth Token');
     try {
-      const response = await axios.get(process.env.REACT_APP_API_LUSER, {
+      const response = await axios.get(process.env.REACT_APP_API_GUSER, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${authToken}`
@@ -21,8 +21,8 @@ const Profile = () => {
       });
       setData(response.data.events);
       setUserDetails({ 
-        username: response.data.username, 
-        zen_id: response.data.zen_id 
+        username: response.data.name, 
+        zen_id: response.data.zencode 
       });
     } catch (error) {
       console.error("Error fetching user data:", error);
