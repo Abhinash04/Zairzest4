@@ -8,8 +8,8 @@ import Footer from "../../component/Footer/Footer";
 import Navbar from "../../component/Navbar/Navbar";
 import { Link as ScrollLink } from "react-scroll";
 import Player from "../../component/MusicPlayer/Player";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Main = () => {
   const authToken = sessionStorage.getItem("Auth Token");
@@ -17,7 +17,7 @@ const Main = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
+      duration: 1000,
       once: true,
     });
   }, []);
@@ -39,11 +39,19 @@ const Main = () => {
           <div className="left-part" data-aos="fade-right">
             <div className="content-left">
               <h1 className="left-head">Hunt the Future in the </h1>
-              <h1 className="left-head left-head2" style={{ marginTop: "-5px" }}>
+              <h1
+                className="left-head left-head2"
+                style={{ marginTop: "-5px" }}
+              >
                 Cyber Forest
               </h1>
               <div className="btn-cntr">
-                <ScrollLink className="a" to="events" smooth={true} duration={500}>
+                <ScrollLink
+                  className="a"
+                  to="events"
+                  smooth={true}
+                  duration={500}
+                >
                   <button className="btn-rn main-btn1">Explore Events</button>
                 </ScrollLink>
                 {!authToken && (
@@ -53,14 +61,13 @@ const Main = () => {
                 )}
                 {authToken && (
                   <Link className="a" to="/profile">
-                    <button className="btn-rn">Go to Profile</button>
+                    <button className="btn-rn main-btn2">Go to Profile</button>
                   </Link>
                 )}
               </div>
             </div>
           </div>
-          <div className="right-part">
-          </div>
+          <div className="right-part"></div>
         </div>
 
         <div className="mid-part" data-aos="fade-up">
@@ -74,10 +81,18 @@ const Main = () => {
                 fontSize: "2.9rem",
               }}
             >
-              <span className="zen-mid">Zen 4.0 :</span>Your Guide in The Cyber Wild!
+              <span className="zen-mid">Zen 4.0 :</span>Your Guide in The Cyber
+              Wild!
             </h1>
             <p>
-              ‘To forge the future, we must first innovate it.’ As we move beyond our journey through the tech wilderness, we welcome you to the dynamic metropolis of technology. Embark with us as we traverse the cutting-edge neighborhoods of Cybercity, exploring diverse tech ecosystems, development pathways, recursion, data structures, and languages such as Python and Firefox. The most exciting revelations are still to come. Stay tuned for groundbreaking experiences ahead!
+              ‘To forge the future, we must first innovate it.’ As we move
+              beyond our journey through the tech wilderness, we welcome you to
+              the dynamic metropolis of technology. Embark with us as we
+              traverse the cutting-edge neighborhoods of Cybercity, exploring
+              diverse tech ecosystems, development pathways, recursion, data
+              structures, and languages such as Python and Firefox. The most
+              exciting revelations are still to come. Stay tuned for
+              groundbreaking experiences ahead!
             </p>
           </div>
         </div>
@@ -88,7 +103,8 @@ const Main = () => {
               Events for you
             </h1>
             <p className="para-bottom">
-              Everything has been made simple for you to scroll around and get the most
+              Everything has been made simple for you to scroll around and get
+              the most
             </p>
             <p className="para-bottom para-bottom2">
               out of the options available.
