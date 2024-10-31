@@ -2,12 +2,9 @@ import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Main.scss";
 import zen from "../../assets/images/zen.webp";
-import techEvents from "../../assets/images/tech-events.webp";
-import funEvents from "../../assets/images/fun-events.webp";
 import Footer from "../../component/Footer/Footer";
 import Navbar from "../../component/Navbar/Navbar";
 import { Link as ScrollLink } from "react-scroll";
-import Player from "../../component/MusicPlayer/Player";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

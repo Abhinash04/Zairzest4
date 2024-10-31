@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.scss";
 import zairzaLogo from "../../assets/images/zairza-logo.webp";
-import { LuGithub } from "react-icons/lu";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiTwitterXFill } from "react-icons/ri";

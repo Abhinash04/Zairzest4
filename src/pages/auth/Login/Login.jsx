@@ -6,7 +6,6 @@ import { ToastContainer } from "react-toastify";
 import "../authCSS/auth.scss";
 import Loginleft from "../../../component/loginLeft/Loginleft";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import g_logo from "../../../assets/images/g_logo.png";
 import { Button } from "react-scroll";
 import "react-toastify/dist/ReactToastify.css";
 

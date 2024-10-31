@@ -5,10 +5,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Card = ({ d }) => {
-  const [isFlipped, setIsFlipped] = useState(false); // State to control card flip
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const toggleFlip = () => {
-    setIsFlipped(!isFlipped); // Toggle flip state
+    setIsFlipped(!isFlipped);
   };
 
   useEffect(() => {

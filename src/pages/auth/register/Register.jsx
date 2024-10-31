@@ -7,7 +7,6 @@ import "../authCSS/auth.scss";
 import Loginleft from "../../../component/loginLeft/Loginleft";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
-import g_logo from "../../../assets/images/g_logo.png";
 import payment1 from "../../../assets/images/payment-Vaishnav.jpeg";
 import '../register/Register.scss'
 
@@ -25,8 +24,8 @@ const Register = () => {
   });
 
   const handleEyeClick = () => {
-    setType(eye ? "text" : "password"); // Toggle between text and password
-    setEye(!eye); // Toggle the eye state
+    setType(eye ? "text" : "password");
+    setEye(!eye);
   };
 
   const handleRegisterChange = (e) => {
@@ -133,13 +132,6 @@ const Register = () => {
                   </ul>
                 </div>
               </div>
-              {/* <div className="payment-upload">
-                <ul>
-                  <li>Scan the QR to register</li>
-                  <li>Take the screenshot and show it in Zairza inorder to get the Zen card</li>
-                  <li>For offline payment, come to Zairza, complete the payment and get the Zen card</li>
-                </ul>
-              </div> */}
             </div>
             <div className="auth-buttons">
             <button type="submit" className="auth-sbutton">

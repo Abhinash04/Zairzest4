@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // background: #111111;
 }
 
 .home {
@@ -379,12 +378,10 @@
   .top-part {
     height: 100vh;
     padding-top: 100px;
-    /* Optional: Adjust this if you need space below the navbar */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Center vertically */
     text-align: center;
 
     .left-part {
@@ -392,7 +389,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* Center vertically */
       text-align: center;
       margin-left: 0;
 
@@ -419,9 +415,7 @@
       flex-direction: row;
       width: 100%;
       justify-content: center;
-      /* Center horizontally */
       align-items: center;
-      /* Center vertically */
       margin-right: 0;
     }
 

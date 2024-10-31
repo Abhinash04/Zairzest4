@@ -2,7 +2,6 @@ import './cardsection.scss';
 import Card from '../card/Card';
 import React, { useEffect } from 'react';
 import { edata } from '../dataset.js';
-import Player from '../../../component/MusicPlayer/Player.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

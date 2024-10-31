@@ -1,72 +1,15 @@
-// import React, { useEffect, useRef, useState } from "react";
-// import { FaPlay } from "react-icons/fa";
-// import { FaPause } from "react-icons/fa";
-// import "./Player.scss";
-
-// export const Player = () => {
-//   const [playing, setPlaying] = useState(false);
-//   const audio = useRef(new Audio(require("../../assets/Music/darkside.mp3")));
-
-//   useEffect(() => {
-//     if (playing) {
-//       audio.current.loop = true;
-//     } else {
-//       audio.current.pause();
-//     }
-//   }, [playing]);
-
-//   const music = () => {
-//     setPlaying(!playing);
-//     if (playing) {
-//       audio.current.pause();
-//     } else {
-//       audio.current.play();
-//     }
-//   };
-//   return (
-//     <div className="pge">
-//       {playing ? (
-//         <button className="play">
-//           <FaPause
-//             style={{
-//               color: "white",
-//               background: "transparent",
-//               height: "2.3rem",
-//               width: "2.3rem",
-//             }}
-//             onClick={music}
-//           />
-//         </button>
-//       ) : (
-//         <button className="play">
-//           <FaPlay
-//             style={{
-//               color: "white",
-//               background: "transparent",
-//               height: "2.3rem",
-//               width: "2.3rem",
-//             }}
-//             onClick={music}
-//           />
-//         </button>
-//       )}
-//     </div>
-//   );
-// };
-
-
 import React, { useState, useRef, useEffect } from 'react';
 import './Player.scss';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Make sure this is included
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Player = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(new Audio(require("../../assets/Music/darkside.mp3"))); // Reference to the audio element
+  const audioRef = useRef(new Audio(require("../../assets/Music/darkside.mp3")));
 
   useEffect(() => {
-    audioRef.current.loop = true; // Enable looping
+    audioRef.current.loop = true;
     return () => {
-      audioRef.current.pause(); // Pause when unmounting
+      audioRef.current.pause();
     };
   }, []);
   
@@ -77,7 +20,7 @@ const Player = () => {
     if (!isPlaying) {
       audio.play()
         .then(() => {
-          setIsPlaying(true);  // Set to playing state only after successful play
+          setIsPlaying(true);
         })
         .catch((error) => {
           console.error("Playback failed: ", error);
@@ -90,7 +33,7 @@ const Player = () => {
 
   useEffect(() => {
     return () => {
-      audioRef.current.pause(); // Pause the audio when navigating away
+      audioRef.current.pause();
       setIsPlaying(false);
     };
   }, []);

@@ -68,9 +68,6 @@ const App = () => {
 
       {!loading && (
         <>
-          {/* Conditionally render Player if not on login or register pages */}
-          {/* {!excludePlayerPaths.includes(location.pathname) && } */}
-
           <Routes>
             <Route
               path="/register"

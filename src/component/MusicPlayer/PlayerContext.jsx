@@ -7,7 +7,7 @@ export const PlayerProvider = ({ children }) => {
   const audio = useRef(new Audio(require("../../assets/Music/darkside.mp3")));
 
   useEffect(() => {
-    audio.current.loop = true; // Enable looping
+    audio.current.loop = true;
 
     const handleEnded = () => setPlaying(false);
     audio.current.addEventListener("ended", handleEnded);
@@ -26,11 +26,11 @@ export const PlayerProvider = ({ children }) => {
       } else {
         audio.current.play()
           .then(() => {
-            return true; // Set playing state to true after successful play
+            return true;
           })
           .catch((error) => {
             console.error("Error playing audio:", error);
-            return false; // Handle playback failure
+            return false;
           });
       }
     });

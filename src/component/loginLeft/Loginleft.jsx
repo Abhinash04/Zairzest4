@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Loginleft.scss";
-import { Link } from 'react-router-dom';
 
 const Loginleft = () => {
   return (

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './About_us.scss';
 import Navbar from '../../component/Navbar/Navbar';
 import Footer from '../../component/Footer/Footer';
-import Player from '../../component/MusicPlayer/Player';
 import frame_1 from '../../assets/images/frame-1.png';
 import frame_2 from '../../assets/images/frame-2.png';
 import frame_3 from '../../assets/images/frame-3.png';
