@@ -124,7 +124,7 @@ const Navbar = () => {
                 )}
                 {authToken && userDetails && (
                   <div className="nav-button-content">
-                    Hi, {userDetails.firstname}
+                    Hi, {userDetails.username}
                   </div>
                 )}
                 {!authToken && (

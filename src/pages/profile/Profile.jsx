@@ -66,7 +66,7 @@ const Profile = () => {
           )}
           <div className="profilesubitem2">
             <h1>{userDetails.username}</h1>
-            <span>ZEN-{userDetails.zen_id}</span>
+            <span>ZenID-{userDetails.zen_id}</span>
           </div>
         </div>
       </div>

@@ -40,22 +40,25 @@ const Register = () => {
         toast.error("Registration Number must be above 8 digits");
         return;
       }
-
+  
       const rturl = process.env.REACT_APP_API_RTURL;
       const res = await axios.post(rturl, registerData, {
         headers: {
-          "Content-Type": `application/json`,
+          "Content-Type": "application/json",
         },
       });
       console.log(res);
       toast.success("Registration Successful");
       navigate('/login');
     } catch (error) {
-      if (error.response.status === 500 || error.response.status === 400) {
+      if (error.response && (error.response.status === 500 || error.response.status === 400)) {
         toast.error("Registration Failed");
       } else {
-        console.log(error);
+        console.error(error);
+        toast.error("An unexpected error occurred");
       }
+    } finally {
+      setLoading(0);
     }
   };
 
