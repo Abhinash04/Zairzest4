@@ -33,7 +33,6 @@ const App = () => {
     return () => {};
   }, [location]);
 
-  // Exclude the Player component on register, login, and loader pages.
   const excludePlayerPaths = ["/register", "/login"];
 
   return (
