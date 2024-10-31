@@ -1,15 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
+import axios from "axios";
 import "./Navbar.scss";
 import Logo from "../../assets/images/zairza.webp";
 
-const Navbar = ({ userDetails }) => {
+const Navbar = () => {
   const [showNav, setShowNav] = useState(true);
   const [animate, setAnimate] = useState(0);
   const navigate = useNavigate();
   const authToken = sessionStorage.getItem("Auth Token");
+  const [data, setData] = useState();
+  const [userDetails, setUserDetails] = useState({ username: "", zen_id: "" });
+
+  const fetchData = async () => {
+    const authToken = sessionStorage.getItem("Auth Token");
+    try {
+      const response = await axios.get(process.env.REACT_APP_API_GUSER, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`,
+        },
+      });
+      setData(response.data.events);
+      setUserDetails({
+        username: response.data.name,
+        zen_id: response.data.zencode,
+      });
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const handleLogout = async () => {
     sessionStorage.removeItem("Auth Token");
@@ -44,7 +70,11 @@ const Navbar = ({ userDetails }) => {
                   </Link>
                 )}
                 {authToken && userDetails && (
-                  <h4 className="navbar__text">Hi, {userDetails.firstname}</h4>
+                  <Link to="/profile">
+                    <h4 className="navbar__text" style={{ color:"#38ccff"}}>
+                      Hi, {userDetails.username}
+                    </h4>
+                  </Link>
                 )}
                 {!authToken && (
                   <Link to="/login">
@@ -52,9 +82,9 @@ const Navbar = ({ userDetails }) => {
                   </Link>
                 )}
                 {authToken && (
-                  <h4 className="navbar__text" onClick={handleLogout}>
-                    Logout
-                  </h4>
+                  <h4 onClick={handleLogout} className="navbar__text">
+                  Logout
+                </h4>
                 )}
                 <AiOutlineMenu
                   className="navbar__menu"

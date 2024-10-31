@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios';
-import './Profile.scss';
+import axios from "axios";
+import "./Profile.scss";
 
-const LazyFooter = React.lazy(() => import('../../component/Footer/Footer'));
-const LazyNavbar = React.lazy(() => import('../../component/Navbar/Navbar'));
+const LazyFooter = React.lazy(() => import("../../component/Footer/Footer"));
+const LazyNavbar = React.lazy(() => import("../../component/Navbar/Navbar"));
 
 const Profile = () => {
   const [data, setData] = useState();
-  const [userDetails, setUserDetails] = useState({ username: '', zen_id: '' });
+  const [userDetails, setUserDetails] = useState({ username: "", zen_id: "" });
   const [profileImage, setProfileImage] = useState(null);
 
   const fetchData = async () => {
-    const authToken = sessionStorage.getItem('Auth Token');
+    const authToken = sessionStorage.getItem("Auth Token");
     try {
       const response = await axios.get(process.env.REACT_APP_API_GUSER, {
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${authToken}`
-        }
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`,
+        },
       });
       setData(response.data.events);
-      setUserDetails({ 
-        username: response.data.name, 
-        zen_id: response.data.zencode 
+      setUserDetails({
+        username: response.data.name,
+        zen_id: response.data.zencode,
       });
     } catch (error) {
       console.error("Error fetching user data:", error);
@@ -31,9 +31,18 @@ const Profile = () => {
 
   useEffect(() => {
     fetchData();
+  }, []);
+
+  useEffect(() => {
     const loadImage = async () => {
-      const randomImage = await import(`../../assets/images/avatar${userDetails.zen_id % 10}.jpg`);
-      setProfileImage(randomImage.default);
+      if (userDetails.zen_id) {
+        const zenid = userDetails.zen_id.substring(1);
+        const zen_id = zenid % 10;
+        const randomImage = await import(
+          `../../assets/images/avatar${zen_id}.jpg`
+        );
+        setProfileImage(randomImage.default);
+      }
     };
     loadImage();
   }, [userDetails.zen_id]);
@@ -46,9 +55,14 @@ const Profile = () => {
       <div className="profile_container">
         <div className="profile-box">
           {profileImage && (
-            <div className="profilesubitem1" 
-                 style={{ backgroundImage: `url(${profileImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            </div>
+            <div
+              className="profilesubitem1"
+              style={{
+                backgroundImage: `url(${profileImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            ></div>
           )}
           <div className="profilesubitem2">
             <h1>{userDetails.username}</h1>
