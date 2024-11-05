@@ -97,20 +97,12 @@ const App = () => {
               element={<StaticEvents type="Fun Events" />}
             />
             <Route
-              path="/home-workshops"
-              element={<StaticEvents type="Workshops" />}
-            />
-            <Route
               path="/tech-events"
               element={<StaticEvents type="Tech Events" />}
             />
             <Route
               path="/fun-events"
               element={<StaticEvents type="Fun Events" />}
-            />
-            <Route
-              path="/workshops"
-              element={<StaticEvents type="Workshops" />}
             />
             <Route path="/about-us" element={<About_us />} />
           </Routes>
