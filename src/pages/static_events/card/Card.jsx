@@ -18,6 +18,7 @@ const Card = ({ d }) => {
     });
   }, []);
 
+
   return (
     <div className="card-container" data-aos="fade-up">
       <div className={`card ${isFlipped ? 'flipped' : ''}`}>
@@ -42,7 +43,7 @@ const Card = ({ d }) => {
         </div>
         <div className="card-face back" data-aos="fade-up">
           <div className="overlay-content">
-            <p style={{fontSize: '21px'}}>Coming Soon</p>
+            <p style={{fontSize: '15px', padding: '20px'}}>{d.event_description}</p>
             <button className="close-btn" onClick={toggleFlip}>
               Close
             </button>
