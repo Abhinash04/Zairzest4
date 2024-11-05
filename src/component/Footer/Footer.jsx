@@ -82,7 +82,7 @@ const Footer = () => {
         <div className="bottom-footer-text">
           <p>
             OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. +91
-            7205883336
+            8984344805
           </p>
         </div>
         <div className="bottom-footer-icon">
