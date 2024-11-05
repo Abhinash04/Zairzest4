@@ -357,14 +357,22 @@
     }
   }
 }
-.zairza {
-  height: auto;
-  width: 60%;
-  position: fixed;
-  bottom: 0;
-
-  margin-left: 2rem;
-  margin-bottom: 2.5rem;
+.sub_nav{
+  .zairza {
+    width: 243px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+  
+    margin-left: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  @media(max-witdh: 410px) {
+    .zairza {
+      width: 220px;
+    }
+  }
 }
 #navbarprofile {
   color: #38ccff;

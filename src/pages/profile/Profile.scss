@@ -10,7 +10,7 @@ $highlight-color: #38CCFF;
   background: url("../../assets/images/profilebg.png") no-repeat center center;
   background-size: cover;
   background-color: black;
-  height: 970px;
+  height: 990px;
   margin-top: 80px;
   position: relative;
   flex-wrap: wrap;
@@ -25,19 +25,18 @@ $highlight-color: #38CCFF;
 .profile-box {
   background: linear-gradient(180deg, $gradient-start 0%, $gradient-end 100%);
   width: 360px;
-  height: 400px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
   text-align: center;
-  box-shadow: radial-gradient(73.13% 73.13% at 50% 50%, $highlight-color 0%, rgba(56, 204, 255, 0) 100%);
   
   &.qr-code-box {
     .qr-code-image {
       width: 240px;
-      height: 240px;
+      height: 270px;
       background: white;
       display: flex;
       align-items: center;
@@ -47,7 +46,6 @@ $highlight-color: #38CCFF;
 
       img {
         width: 100%;
-        height: 100%;
         border-radius: 8px;
       }
     }
@@ -85,7 +83,7 @@ $highlight-color: #38CCFF;
 @media screen and (max-width: 768px) {
   .profile-box {
     width: 310px;
-    height: 340px;
+    height: 400px;
     margin-bottom: 20px;
 
     .profilesubitem1,
@@ -103,7 +101,6 @@ $highlight-color: #38CCFF;
 @media screen and (max-width: 480px) {
   .profile-box {
     width: 280px;
-    height: 320px;
 
     .profilesubitem1,
     .qr-code-image {
