@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Profile.scss";
-import payment from "../../assets/images/payment-Vaishnav.jpeg"
+import payment from "../../assets/images/Payment69.png"
 import whatsapp from "../../assets/images/whatsapp.png"
 
 const LazyFooter = React.lazy(() => import("../../component/Footer/Footer"));

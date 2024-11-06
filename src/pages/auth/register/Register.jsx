@@ -7,7 +7,7 @@ import "../authCSS/auth.scss";
 import Loginleft from "../../../component/loginLeft/Loginleft";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
-import payment1 from "../../../assets/images/payment-Vaishnav.jpeg";
+import payment1 from "../../../assets/images/Payment69.png";
 import '../register/Register.scss'
 
 
