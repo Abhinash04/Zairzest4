@@ -23,8 +23,8 @@ export const edata = [
     },
     {
         "_id": "6527eb268ccf479d5ca9d645",
-        "event_name": "Robo Soccer",
-        "event_description": "Robo Soccer is a thrilling robot soccer match, where autonomous or remote-controlled robots compete to score the most goals in 5 minutes. Each one-on-one match showcases skill and strategy as robots go head-to-head. For participants without their own soccer bot, loaner bots will be available, making it accessible for all. Just bring your enthusiasm, and get ready for some robotic action!",
+        "event_name": "Robo Sumo",
+        "event_description": "Robo Sumo is an electrifying match where autonomous or remote-controlled robots compete to push each other out of the ring within 5 minutes. Loaner bots are available, so anyone can join. Bring your excitement, and get ready for intense robotic action!",
         "total_enrolls": 54,
         "event_date": "16 Oct - 3:00-4:15 PM",
         "event_venue": "SAC Area",
